@@ -1,0 +1,463 @@
+' Surplus value: class model
+' Abstract determinations rise toward the concrete capitalist production of surplus value.
+' Companion notes: notes/surplus-value.md
+'
+' Stereotypes
+'   transhistorical       — material conditions of human life; no specific social form
+'   abstract det.         — simple, one-sided determination; never exists on its own
+'   social relation       — not a physical property of things
+'   historically specific — concrete capitalist (or commodity) form
+'   personification       — individual as bearer of a class relation
+
+@startuml surplus-value-overview
+title Surplus value — rising from the abstract to the concrete
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 80
+skinparam nodesep 50
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+left to right direction
+
+package "I. Material reproduction\n(transhistorical labour process)" as P1 {
+  class Nature <<transhistorical>>
+  abstract class LabourProcess <<transhistorical>>
+  class UseValue <<transhistorical>>
+  class LabourPower <<transhistorical>>
+}
+
+package "II. Commodity-value form\n(simple determinations of exchange)" as P2 {
+  abstract class AbstractLabour <<abstract det.>> <<social relation>>
+  abstract class Value <<abstract det.>> <<social relation>>
+  class Commodity <<historically specific>>
+  class Money <<historically specific>>
+}
+
+package "III. Capitalist production\n(concrete: wage-labour and capital)" as P3 {
+  class WageLabourer <<personification>>
+  class Capitalist <<personification>>
+  class LabourPowerAsCommodity <<historically specific>>
+  class Capital <<historically specific>> <<social relation>>
+  class CapitalistProductionProcess <<historically specific>>
+  class SurplusValue <<historically specific>> <<social relation>>
+}
+
+Nature --> LabourProcess : materials
+LabourPower --> LabourProcess : expended in
+LabourProcess --> UseValue : produces
+
+UseValue ..> Commodity : produced for exchange
+LabourPower ..> LabourPowerAsCommodity : sold
+LabourProcess ..> CapitalistProductionProcess : + command\n+ valorization
+AbstractLabour ..> Value : social substance
+Value ..> Capital : + self-expansion
+Commodity *-- UseValue
+Commodity *-- Value
+Money ..> Value : independent\nappearance
+WageLabourer --> LabourPowerAsCommodity : must sell
+Capitalist --> LabourPowerAsCommodity : buys
+Capitalist --> Capital : personifies
+CapitalistProductionProcess --> SurplusValue : produces
+Capital *-- SurplusValue
+
+note as NMethod
+  **Method (Grundrisse)**
+  Abstract types = simple determinations
+  that never exist on their own.
+  Concrete types = historically specific
+  forms: the concentration of many
+  determinations.
+  Thought reproduces the concrete;
+  it does not generate the real subject
+  (society in nature).
+end note
+
+@enduml
+
+
+@startuml surplus-value-labour-process
+title I. Material reproduction — the labour process
+caption Transhistorical determinations. No surplus value yet: only the metabolism with nature.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam ranksep 55
+skinparam nodesep 40
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+}
+
+together {
+  class Nature <<transhistorical>> {
+    independent material world
+    laws of matter
+  }
+  class Human <<transhistorical>> {
+    living natural being
+    purposive activity
+  }
+}
+
+class LabourPower <<transhistorical>> {
+  mental and physical capacity to work
+  embodied in the living individual
+}
+
+abstract class LivingLabour <<transhistorical>> {
+  expenditure of labour-power
+  duration : labour-time
+  here only as useful activity
+}
+
+abstract class LabourProcess <<transhistorical>> {
+  metabolism with nature
+  everlasting nature-imposed condition
+}
+
+together {
+  class ObjectOfLabour <<transhistorical>> {
+    material worked upon
+  }
+  class InstrumentOfLabour <<transhistorical>> {
+    placed between worker and object
+  }
+}
+
+class MeansOfProduction <<transhistorical>> {
+  object + instrument
+  (from the standpoint of the result)
+}
+
+class UseValue <<transhistorical>> {
+  useful thing / material wealth
+  usefulness is qualitative
+}
+
+together {
+  class MeansOfSubsistence <<transhistorical>> {
+    use-values that reproduce the worker
+  }
+  class ObjectifiedLabour <<transhistorical>> {
+    past living labour fixed in a product
+  }
+}
+
+Human *-- LabourPower : capacity of
+LabourPower --> LivingLabour : expended as
+Human --> LabourProcess : conducts
+LabourProcess o-- LivingLabour
+LabourProcess o-- ObjectOfLabour
+LabourProcess o-- InstrumentOfLabour
+ObjectOfLabour --|> MeansOfProduction
+InstrumentOfLabour --|> MeansOfProduction
+Nature --> ObjectOfLabour : earth, materials
+LabourProcess --> UseValue : produces
+MeansOfSubsistence --|> UseValue
+MeansOfProduction --|> UseValue
+MeansOfSubsistence ..> LabourPower : reproduces
+UseValue --> ObjectifiedLabour : past labour\nin useful form
+ObjectifiedLabour ..> InstrumentOfLabour : tools are\npast labour
+LivingLabour --> MeansOfProduction : sets in motion
+
+Human -[hidden]down-> LabourProcess
+Nature -[hidden]down-> ObjectOfLabour
+LabourProcess -[hidden]down-> UseValue
+UseValue -[hidden]down-> MeansOfProduction
+
+note right of LabourProcess
+  Marx, Capital I, ch. 7:
+  examine the labour process first
+  independently of any historical form.
+  A capitalist at the helm does not
+  change its general character:
+  humans still transform nature
+  to produce use-values.
+end note
+
+note bottom of UseValue
+  Use-values are the material content of wealth
+  in every society. They are not values.
+  Petty: labour the father, nature the mother.
+end note
+
+@enduml
+
+
+@startuml surplus-value-commodity
+title II. Commodity and value — dual character
+caption Simple determinations of commodity production. Value is a social relation, not a physical property.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam ranksep 55
+skinparam nodesep 45
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+}
+
+abstract class LivingLabour <<transhistorical>> {
+  same activity, two social aspects
+}
+
+together {
+  abstract class ConcreteLabour <<transhistorical>> {
+    specific useful activity
+    qualitative
+  }
+  abstract class AbstractLabour <<abstract det.>> <<social relation>> {
+    homogeneous expenditure of labour-power
+    real social abstraction through exchange
+  }
+}
+
+class UseValue <<transhistorical>> {
+  material body of the commodity
+}
+
+class Commodity <<historically specific>> {
+  article of wealth produced for exchange
+}
+
+abstract class Value <<abstract det.>> <<social relation>> {
+  {abstract}
+  magnitude : socially necessary labour-time
+}
+
+together {
+  class ExchangeValue <<historically specific>> {
+    form of appearance of value
+    quantitative relation of commodities
+  }
+  class SociallyNecessaryLabourTime <<social relation>> {
+    labour-time under average conditions
+    of production and skill
+  }
+}
+
+class Money <<historically specific>> {
+  universal equivalent
+  independent form of value
+  price is value in money
+}
+
+class SimpleCommodityProduction <<historically specific>> {
+  producer owns means of production
+  sells own product
+  realises the full value — no surplus value
+}
+
+LivingLabour ..|> ConcreteLabour
+LivingLabour ..|> AbstractLabour
+ConcreteLabour --> UseValue : produces
+AbstractLabour --> Value : objectifies
+Commodity *-- UseValue : bearer
+Commodity *-- Value : social form
+Value --> ExchangeValue : appears as
+Value --> SociallyNecessaryLabourTime : magnitude
+Value ..> AbstractLabour : social substance
+Money --|> Commodity : one commodity\nas general equivalent
+Money --> Value : necessary form\nof appearance
+SimpleCommodityProduction --> Commodity : produces\nand sells
+
+LivingLabour -[hidden]down-> Commodity
+Commodity -[hidden]down-> Value
+Value -[hidden]down-> Money
+
+note right of Value
+  Value cannot be found in the
+  physical or chemical properties
+  of a thing (SPGB; Marx).
+  It is a social property that
+  appears as a relation between things
+  — commodity fetishism.
+end note
+
+note bottom of AbstractLabour
+  Not a hidden essence inside labour.
+  Different concrete labours are actually
+  equated when products exchange as values.
+  The abstraction is social and historical,
+  not metaphysical.
+end note
+
+note bottom of SimpleCommodityProduction
+  SPGB tailor: owns tools and product,
+  sells the coat at its value — no surplus value.
+  Surplus value requires wage-labour,
+  not commodity exchange as such.
+end note
+
+@enduml
+
+
+@startuml surplus-value-capital
+title III. Wage-labour and capital — the production of surplus value
+caption Concrete capitalist form. Determinations meet: commodity + class monopoly + labour-power as commodity + unpaid labour.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+package "Class relation" {
+  class CapitalistModeOfProduction <<historically specific>> {
+    class monopoly of the means of life
+    generalised commodity production
+    production for profit
+  }
+  class WorkingClass <<historically specific>>
+  class CapitalistClass <<historically specific>>
+  class WageLabourer <<personification>> {
+    separated from means of production
+    must sell labour-power to live
+  }
+  class Capitalist <<personification>> {
+    personification of capital
+    buys LP and MP; appropriates the product
+  }
+}
+
+package "Labour-power as commodity" {
+  class LabourPower <<transhistorical>> {
+    capacity to work
+  }
+  class LabourPowerAsCommodity <<historically specific>> {
+    value = SNLT to reproduce the worker
+    use-value = living labour (creates value)
+  }
+  class Wage <<historically specific>> {
+    price of labour-power
+  }
+  class MeansOfSubsistence <<transhistorical>>
+  class Commodity <<historically specific>>
+}
+
+package "Capital" {
+  abstract class Value <<abstract det.>> <<social relation>>
+  class Capital <<historically specific>> <<social relation>> {
+    value that valorizes itself
+    M – C (LP + MP) … P … C' – M'
+    c : constant   v : variable   s : surplus
+    organicComposition() : c / v
+    rateOfSurplusValue() : s / v
+    rateOfProfit() : s / (c + v)
+  }
+  class ConstantCapital <<historically specific>> {
+    value in means of production
+    transferred, not expanded
+  }
+  class VariableCapital <<historically specific>> {
+    value in labour-power
+    the part that expands
+  }
+  class MeansOfProduction <<transhistorical>>
+}
+
+package "Labour process and valorization" {
+  abstract class LabourProcess <<transhistorical>>
+  class CapitalistProductionProcess <<historically specific>> {
+    labour process under command of capital
+    product belongs to the capitalist
+    extractAbsoluteSurplusValue()
+    extractRelativeSurplusValue()
+  }
+  class ValorizationProcess <<historically specific>> {
+    same process counted as labour-time
+    beyond the equivalent of v: surplus value
+  }
+  abstract class LivingLabour <<transhistorical>> {
+    creates new value
+    transfers value of constant capital
+  }
+  class WorkingDay <<historically specific>> {
+    necessaryLabourTime : reproduces v
+    surplusLabourTime : produces s
+  }
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    sole source of profit, interest, rent
+  }
+}
+
+CapitalistModeOfProduction *-- WorkingClass
+CapitalistModeOfProduction *-- CapitalistClass
+WorkingClass o-- WageLabourer
+CapitalistClass o-- Capitalist
+
+WageLabourer --> LabourPowerAsCommodity : sells
+Capitalist --> LabourPowerAsCommodity : buys
+Capitalist --> MeansOfProduction : monopolizes
+WageLabourer ..> MeansOfProduction : excluded from
+LabourPowerAsCommodity --|> LabourPower
+LabourPowerAsCommodity --|> Commodity
+LabourPowerAsCommodity --> Wage : sold at
+LabourPowerAsCommodity --> MeansOfSubsistence : value determined by
+WageLabourer --> MeansOfSubsistence : consumes
+
+Capital --|> Value
+Capital *-- ConstantCapital
+Capital *-- VariableCapital
+ConstantCapital ..> MeansOfProduction : MP become capital\nonly in this relation
+VariableCapital ..> LabourPowerAsCommodity : v laid out as wages
+Capitalist --> Capital : advances
+
+CapitalistProductionProcess --|> LabourProcess
+CapitalistProductionProcess *-- ValorizationProcess : dual character
+CapitalistProductionProcess o-- LivingLabour
+CapitalistProductionProcess o-- MeansOfProduction
+LabourPowerAsCommodity --> LivingLabour : consumed as
+LivingLabour --> ConstantCapital : transfers c
+LivingLabour --> VariableCapital : replaces v
+LivingLabour --> SurplusValue : creates s
+ValorizationProcess --> WorkingDay
+WorkingDay --> SurplusValue : surplus labour-time
+Capital *-- SurplusValue : appropriates s
+
+note right of LabourPowerAsCommodity
+  The worker does not sell labour.
+  After the sale, living labour belongs
+  to the buyer. Labour-power / labour
+  is what makes surplus value compatible
+  with exchange of equivalents.
+end note
+
+note bottom of SurplusValue
+  s/v = rate of exploitation.
+  Absolute: lengthen the working day.
+  Relative: cheapen means of subsistence
+  (raise productivity) and shorten
+  necessary labour-time.
+  s/(c+v) = rate of profit — a different ratio.
+end note
+
+note top of Capital
+  Capital is not a thing. Machines are
+  means of production; they become capital
+  only as a social relation that commands
+  wage-labour for surplus value.
+end note
+
+@enduml

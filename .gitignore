@@ -1,0 +1,7 @@
+# Rendered diagrams are generated artefacts — regenerate with:
+#   plantuml -tsvg -o models/rendered models/surplus-value.puml
+models/rendered/
+
+# Editor / OS cruft
+.DS_Store
+*.swp
