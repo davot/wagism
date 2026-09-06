@@ -27,6 +27,7 @@ caption Legend and full stereotype meanings: notes/stereotypes.md
 
 hide circle
 skinparam shadowing false
+skinparam backgroundColor white
 skinparam classAttributeIconSize 0
 skinparam packageStyle rectangle
 skinparam ranksep 70

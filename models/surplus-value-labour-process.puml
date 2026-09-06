@@ -9,6 +9,7 @@ caption Transhistorical determinations. No surplus value yet: only the metabolis
 
 hide circle
 skinparam shadowing false
+skinparam backgroundColor white
 skinparam classAttributeIconSize 0
 skinparam ranksep 55
 skinparam nodesep 40

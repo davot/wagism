@@ -34,6 +34,16 @@ Later increments can add reproduction schemas, prices of production, credit, the
 
 ```bash
 plantuml -tsvg -o rendered models/*.puml
+
+# PlantUML's SVG output has a transparent background (`skinparam
+# backgroundColor white` is a no-op for SVG on at least plantuml
+# 1.2020.02). A transparent background renders as black-on-black —
+# relationship labels become unreadable — in dark-mode browsers/viewers.
+# Force an opaque white background by inserting a full-canvas rect as
+# the first drawn element of each SVG:
+for f in models/rendered/*.svg; do
+  sed -i '0,/<defs\/><g>/{s//<defs\/><rect width="100%" height="100%" fill="#FFFFFF"\/><g>/}' "$f"
+done
 ```
 
 Each file is a single, self-contained `@startuml`/`@enduml` diagram — deliberately one diagram per file, not one file with several `@startuml` blocks, since several GitHub PlantUML viewers (and the public plantuml.com renderer) handle multi-diagram files unreliably. Rendered SVGs are committed under `models/rendered/` and embedded in the notes and this README, so the diagrams are visible on GitHub for everyone, independent of any browser extension.

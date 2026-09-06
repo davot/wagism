@@ -9,6 +9,7 @@ caption Concrete capitalist form. Determinations meet: commodity + class monopol
 
 hide circle
 skinparam shadowing false
+skinparam backgroundColor white
 skinparam classAttributeIconSize 0
 skinparam packageStyle rectangle
 skinparam ranksep 50

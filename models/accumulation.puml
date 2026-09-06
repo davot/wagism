@@ -11,6 +11,7 @@ caption Why accumulation is not a political choice: notes/accumulation.md
 
 hide circle
 skinparam shadowing false
+skinparam backgroundColor white
 skinparam classAttributeIconSize 0
 skinparam ranksep 55
 skinparam nodesep 45
