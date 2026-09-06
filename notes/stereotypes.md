@@ -8,7 +8,7 @@ They answer three different questions:
 - **How one-sided is it?** — a simple determination that never appears alone, or a richer historical form?
 - **What kind of thing is it?** — a material bearer, a social relation, or a personification of a class role?
 
-A type may carry more than one stereotype (`Capital` is both historically specific and a social relation).
+A type may carry more than one stereotype (`Capital` is both historically specific and a social relation). Where a type carries several, the diagram's fill colour follows the *first* stereotype declared on that type, so declaration order is chosen deliberately — see [Colour and declaration order](#colour-and-declaration-order) below.
 
 ---
 
@@ -43,9 +43,19 @@ That is also the modelling stance taken from Samuel A. Chambers: these are objec
 | `social relation` | Not a physical property of a thing. Value is not in the diamond; capital is not the machine. |
 | `personification` | An individual as bearer of a class relation (`WageLabourer`, `Capitalist`), not a moral type or a theory of human nature |
 
-`transhistorical` and `historically specific` are one cut (any society vs a definite social form). `abstract det.` is a different cut (simple determination vs richer concrete). Do not collapse them.
+`transhistorical` and `historically specific` are one cut (any society vs a definite social form). `abstract det.` is a different cut (simple determination vs richer concrete). **Do not collapse them** — and in particular, do not assume the two cuts are mutually exclusive. `Value`, `AbstractLabour`, and `SociallyNecessaryLabourTime` are all abstract determinations *and* historically specific: they are one-sided (never appear on their own) *and* they do not exist in every society (only under generalised commodity production). Both facts are true at once, so both stereotypes are applied to those three types.
 
 `abstract det.` types are usually also UML-abstract: they cannot “exist alone.” Value never appears as such; it appears as exchange-value, as money, as capital. The labour process never exists in general, only as slave, peasant, artisan, wage, and so on.
+
+### Colour and declaration order
+
+PlantUML colours a class by the *first* stereotype declared on it (tested empirically; not documented upstream). Where a type carries several stereotypes, this project declares `abstract det.` or `personification` first so the diagram keeps its main visual grouping — simple determinations in blue, personifications in cream — even though the type is also, correctly, tagged `historically specific` or `social relation`. For example:
+
+```
+abstract class Value <<abstract det.>> <<social relation>> <<historically specific>>
+```
+
+renders blue (the `abstract det.` colour), not pink. The pink `historically specific` tag is still present and still true of the type; it just isn’t what the fill colour foregrounds. Read the stereotype list in the class header, not only the colour, when the type carries more than one.
 
 ---
 
