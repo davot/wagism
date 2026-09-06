@@ -24,15 +24,16 @@ PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.
    - [surplus-value-labour-process.puml](models/surplus-value-labour-process.puml) — I. material reproduction
    - [surplus-value-commodity.puml](models/surplus-value-commodity.puml) — II. commodity and value
    - [surplus-value-capital.puml](models/surplus-value-capital.puml) — III. wage-labour and capital
+2. Accumulation of capital — why accumulation is a compulsion of competition among many capitals, not a policy choice — notes in [notes/accumulation.md](notes/accumulation.md), source in [accumulation.puml](models/accumulation.puml)
 
-Later increments can add competition and prices of production, accumulation, the state, and world market, always rising from these abstract determinations toward a richer concrete.
+Later increments can add reproduction schemas, prices of production, credit, the state, and world market, always rising from these abstract determinations toward a richer concrete.
 
 ![Surplus value overview](models/rendered/surplus-value-overview.svg)
 
 ## Rendering the diagrams
 
 ```bash
-plantuml -tsvg -o rendered models/surplus-value-*.puml
+plantuml -tsvg -o rendered models/*.puml
 ```
 
 Each file is a single, self-contained `@startuml`/`@enduml` diagram — deliberately one diagram per file, not one file with several `@startuml` blocks, since several GitHub PlantUML viewers (and the public plantuml.com renderer) handle multi-diagram files unreliably. Rendered SVGs are committed under `models/rendered/` and embedded in the notes and this README, so the diagrams are visible on GitHub for everyone, independent of any browser extension.

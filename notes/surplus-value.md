@@ -12,7 +12,9 @@ Capitalism, in the sense used here, is a historically specific social system: cl
 
 This increment models only the **theory of (surplus) value**: how material wealth takes the commodity form; how value is a social relation measured by socially necessary labour-time; how labour-power becomes a commodity; and how unpaid labour appears as surplus value, the sole source of profit, interest, and rent.
 
-It does **not** yet model competition among many capitals, prices of production, credit, the state, or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
+It does **not** yet model prices of production, credit, the state, or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
+
+A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. It does not yet model the further consequences of competition (equalisation of profit rates, prices of production, concentration and centralisation of capital, the reserve army of labour).
 
 ---
 
@@ -312,11 +314,11 @@ A model that silently dropped `Nature`, `UseValue`, or `LabourProcess` would hav
 These belong to later, more concrete increments. They are not “corrections” of this model.
 
 - Prices of production and the average rate of profit (*Capital* III).
-- Many capitals, competition, merchant’s capital, interest-bearing capital.
+- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital, interest-bearing capital. (The compulsion to accumulate that competition exerts on the individual capitalist is modelled in [accumulation.md](accumulation.md); its further consequences are not.)
 - Turnover, commercial and financial institutions as shorteners of turnover.
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.
-- Reproduction schemas, accumulation, reserve army.
+- Reproduction schemas (Departments I/II), concentration and centralisation of capital, the reserve army of labour.
 - The state, world market, and crises as a concrete totality.
 - Credit-money (Chambers’s emphasis on money as a credit/debt relation can be taken up there without abandoning money as the form of value).
 

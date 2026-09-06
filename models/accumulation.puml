@@ -1,0 +1,118 @@
+' Accumulation of capital: class model
+' Companion notes: notes/accumulation.md — full stereotype legend: notes/stereotypes.md
+'
+' Demonstrates that the drive to accumulate is not the capitalist's personal
+' choice or a matter of policy, but a compulsion exerted on the personification
+' of capital by competition among many capitals (Capital I, ch. 23–25).
+
+@startuml accumulation
+title IV. Accumulation of capital — competition as coercive law
+caption Why accumulation is not a political choice: notes/accumulation.md
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam ranksep 55
+skinparam nodesep 45
+skinparam class {
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+class CapitalistCompetition <<social relation>> <<historically specific>> {
+  many capitals, mutually independent
+  and mutually indifferent
+  exert coercive pressure on each other
+}
+
+class Capitalist <<personification>> {
+  personification of capital
+  (full definition: surplus-value-capital.puml)
+}
+
+class Capital <<historically specific>> <<social relation>> {
+  value that valorizes itself
+  (full definition: surplus-value-capital.puml)
+}
+
+class SurplusValue <<historically specific>> <<social relation>> {
+  unpaid labour
+  (full definition: surplus-value-capital.puml)
+}
+
+class ConstantCapital <<historically specific>> {
+  value in means of production
+}
+
+class VariableCapital <<historically specific>> {
+  value in labour-power
+}
+
+class AccumulationOfCapital <<historically specific>> {
+  capitalisation of surplus value
+  reproduction on an expanded scale
+}
+
+class Revenue <<historically specific>> {
+  surplus value consumed unproductively
+  the capitalist class's consumption fund
+}
+
+class SimpleReproduction <<historically specific>> {
+  {abstract}
+  limiting case: all surplus value spent
+  as revenue; scale of capital unchanged
+}
+
+Capital *-- SurplusValue : appropriates
+SurplusValue --> Revenue : part consumed\nunproductively as
+SurplusValue --> AccumulationOfCapital : part capitalised as
+SurplusValue ..> SimpleReproduction : if wholly consumed\n(never sustained)
+AccumulationOfCapital --> ConstantCapital : expands
+AccumulationOfCapital --> VariableCapital : expands
+AccumulationOfCapital --> Capital : reconverted into\nadditional capital
+Capitalist --> AccumulationOfCapital : executes\n(bearer, not author)
+Capitalist --> Revenue : draws personal\nconsumption from
+CapitalistCompetition --> Capitalist : compels accumulation\n(independent of will)
+CapitalistCompetition ..> SimpleReproduction : rules out as\na lasting state
+
+CapitalistCompetition -[hidden]down-> Capital
+Capital -[hidden]right-> SurplusValue
+SurplusValue -[hidden]down-> AccumulationOfCapital
+AccumulationOfCapital -[hidden]right-> Revenue
+Revenue -[hidden]right-> SimpleReproduction
+AccumulationOfCapital -[hidden]down-> ConstantCapital
+ConstantCapital -[hidden]right-> VariableCapital
+
+note as NLaw
+  **Necessity, not choice (Capital I, ch. 24)**
+  "Accumulate, accumulate! That is Moses
+  and the prophets!" The compulsion is not
+  the capitalist's greed, morality, or a
+  policy choice. Competition among many
+  capitals turns capital's own immanent
+  tendency to expand into an external
+  coercive law acting on whoever occupies
+  the role: accumulate, or be undersold,
+  outcompeted, and eliminated as a capital.
+end note
+
+note bottom of SimpleReproduction
+  Useful only as an analytical baseline
+  (Capital I, ch. 23) to isolate what
+  accumulation adds. Under real
+  competition among many capitals it
+  cannot persist: it collapses into
+  reproduction on an expanded scale.
+end note
+
+note bottom of CapitalistCompetition
+  Not a moral failing of individuals.
+  "Many capitals" is itself historically
+  specific: capital only ever exists as
+  many, mutually repelling capitals
+  (Grundrisse, "Notebook on capital").
+end note
+
+@enduml
