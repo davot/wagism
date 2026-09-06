@@ -1,0 +1,112 @@
+' Surplus value: class model — 2 of 4 (labour process)
+' Siblings: surplus-value-overview.puml, surplus-value-commodity.puml,
+'           surplus-value-capital.puml
+' Companion notes: notes/surplus-value.md §5 — full stereotype legend: notes/stereotypes.md
+
+@startuml surplus-value-labour-process
+title I. Material reproduction — the labour process
+caption Transhistorical determinations. No surplus value yet: only the metabolism with nature.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam ranksep 55
+skinparam nodesep 40
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+}
+
+together {
+  class Nature <<transhistorical>> {
+    independent material world
+    laws of matter
+  }
+  class Human <<transhistorical>> {
+    living natural being
+    purposive activity
+  }
+}
+
+class LabourPower <<transhistorical>> {
+  mental and physical capacity to work
+  embodied in the living individual
+}
+
+abstract class LivingLabour <<transhistorical>> {
+  expenditure of labour-power
+  duration : labour-time
+  here only as useful activity
+}
+
+abstract class LabourProcess <<transhistorical>> {
+  metabolism with nature
+  everlasting nature-imposed condition
+}
+
+together {
+  class ObjectOfLabour <<transhistorical>> {
+    material worked upon
+  }
+  class InstrumentOfLabour <<transhistorical>> {
+    placed between worker and object
+  }
+}
+
+class MeansOfProduction <<transhistorical>> {
+  object + instrument
+  (from the standpoint of the result)
+}
+
+class UseValue <<transhistorical>> {
+  useful thing / material wealth
+  usefulness is qualitative
+}
+
+together {
+  class MeansOfSubsistence <<transhistorical>> {
+    use-values that reproduce the worker
+  }
+  class ObjectifiedLabour <<transhistorical>> {
+    past living labour fixed in a product
+  }
+}
+
+Human *-- LabourPower : capacity of
+LabourPower --> LivingLabour : expended as
+Human --> LabourProcess : conducts
+LabourProcess o-- LivingLabour
+LabourProcess o-- ObjectOfLabour
+LabourProcess o-- InstrumentOfLabour
+ObjectOfLabour --|> MeansOfProduction
+InstrumentOfLabour --|> MeansOfProduction
+Nature --> ObjectOfLabour : earth, materials
+LabourProcess --> UseValue : produces
+MeansOfSubsistence --|> UseValue
+MeansOfProduction --|> UseValue
+MeansOfSubsistence ..> LabourPower : reproduces
+UseValue --> ObjectifiedLabour : past labour\nin useful form
+ObjectifiedLabour ..> InstrumentOfLabour : tools are\npast labour
+LivingLabour --> MeansOfProduction : sets in motion
+
+Human -[hidden]down-> LabourProcess
+Nature -[hidden]down-> ObjectOfLabour
+LabourProcess -[hidden]down-> UseValue
+UseValue -[hidden]down-> MeansOfProduction
+
+note right of LabourProcess
+  Marx, Capital I, ch. 7:
+  examine the labour process first
+  independently of any historical form.
+  A capitalist at the helm does not
+  change its general character:
+  humans still transform nature
+  to produce use-values.
+end note
+
+note bottom of UseValue
+  Use-values are the material content of wealth
+  in every society. They are not values.
+  Petty: labour the father, nature the mother.
+end note
+
+@enduml

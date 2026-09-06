@@ -1,0 +1,162 @@
+' Surplus value: class model — 4 of 4 (wage-labour and capital)
+' Siblings: surplus-value-overview.puml, surplus-value-labour-process.puml,
+'           surplus-value-commodity.puml
+' Companion notes: notes/surplus-value.md §7 — full stereotype legend: notes/stereotypes.md
+
+@startuml surplus-value-capital
+title III. Wage-labour and capital — the production of surplus value
+caption Concrete capitalist form. Determinations meet: commodity + class monopoly + labour-power as commodity + unpaid labour.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+package "Class relation" {
+  class CapitalistModeOfProduction <<historically specific>> {
+    class monopoly of the means of life
+    generalised commodity production
+    production for profit
+  }
+  class WorkingClass <<historically specific>>
+  class CapitalistClass <<historically specific>>
+  class WageLabourer <<personification>> {
+    separated from means of production
+    must sell labour-power to live
+  }
+  class Capitalist <<personification>> {
+    personification of capital
+    buys LP and MP; appropriates the product
+  }
+}
+
+package "Labour-power as commodity" {
+  class LabourPower <<transhistorical>> {
+    capacity to work
+  }
+  class LabourPowerAsCommodity <<historically specific>> {
+    value = SNLT to reproduce the worker
+    use-value = living labour (creates value)
+  }
+  class Wage <<historically specific>> {
+    price of labour-power
+  }
+  class MeansOfSubsistence <<transhistorical>>
+  class Commodity <<historically specific>>
+}
+
+package "Capital" {
+  abstract class Value <<abstract det.>> <<social relation>> <<historically specific>>
+  class Capital <<historically specific>> <<social relation>> {
+    value that valorizes itself
+    M – C (LP + MP) … P … C' – M'
+    c : constant   v : variable   s : surplus
+    organicComposition() : c / v
+    rateOfSurplusValue() : s / v
+    rateOfProfit() : s / (c + v)
+  }
+  class ConstantCapital <<historically specific>> {
+    value in means of production
+    transferred, not expanded
+  }
+  class VariableCapital <<historically specific>> {
+    value in labour-power
+    the part that expands
+  }
+  class MeansOfProduction <<transhistorical>>
+}
+
+package "Labour process and valorization" {
+  abstract class LabourProcess <<transhistorical>>
+  class CapitalistProductionProcess <<historically specific>> {
+    labour process under command of capital
+    product belongs to the capitalist
+    extractAbsoluteSurplusValue()
+    extractRelativeSurplusValue()
+  }
+  class ValorizationProcess <<historically specific>> {
+    same process counted as labour-time
+    beyond the equivalent of v: surplus value
+  }
+  abstract class LivingLabour <<transhistorical>> {
+    creates new value
+    transfers value of constant capital
+  }
+  class WorkingDay <<historically specific>> {
+    necessaryLabourTime : reproduces v
+    surplusLabourTime : produces s
+  }
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    sole source of profit, interest, rent
+  }
+}
+
+CapitalistModeOfProduction *-- WorkingClass
+CapitalistModeOfProduction *-- CapitalistClass
+WorkingClass o-- WageLabourer
+CapitalistClass o-- Capitalist
+
+WageLabourer --> LabourPowerAsCommodity : sells
+Capitalist --> LabourPowerAsCommodity : buys
+Capitalist --> MeansOfProduction : monopolizes
+WageLabourer ..> MeansOfProduction : excluded from
+LabourPowerAsCommodity --|> LabourPower
+LabourPowerAsCommodity --|> Commodity
+LabourPowerAsCommodity --> Wage : sold at
+LabourPowerAsCommodity --> MeansOfSubsistence : value determined by
+WageLabourer --> MeansOfSubsistence : consumes
+
+Capital --|> Value
+Capital *-- ConstantCapital
+Capital *-- VariableCapital
+ConstantCapital ..> MeansOfProduction : MP become capital\nonly in this relation
+VariableCapital ..> LabourPowerAsCommodity : v laid out as wages
+Capitalist --> Capital : advances
+
+CapitalistProductionProcess --|> LabourProcess
+CapitalistProductionProcess *-- ValorizationProcess : dual character
+CapitalistProductionProcess o-- LivingLabour
+CapitalistProductionProcess o-- MeansOfProduction
+LabourPowerAsCommodity --> LivingLabour : consumed as
+LivingLabour --> ConstantCapital : transfers c
+LivingLabour --> VariableCapital : replaces v
+LivingLabour --> SurplusValue : creates s
+ValorizationProcess --> WorkingDay
+WorkingDay --> SurplusValue : surplus labour-time
+Capital *-- SurplusValue : appropriates s
+
+note right of LabourPowerAsCommodity
+  The worker does not sell labour.
+  After the sale, living labour belongs
+  to the buyer. Labour-power / labour
+  is what makes surplus value compatible
+  with exchange of equivalents.
+end note
+
+note bottom of SurplusValue
+  s/v = rate of exploitation.
+  Absolute: lengthen the working day.
+  Relative: cheapen means of subsistence
+  (raise productivity) and shorten
+  necessary labour-time.
+  s/(c+v) = rate of profit — a different ratio.
+end note
+
+note top of Capital
+  Capital is not a thing. Machines are
+  means of production; they become capital
+  only as a social relation that commands
+  wage-labour for surplus value.
+end note
+
+@enduml

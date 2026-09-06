@@ -1,0 +1,113 @@
+' Surplus value: class model — 3 of 4 (commodity and value)
+' Siblings: surplus-value-overview.puml, surplus-value-labour-process.puml,
+'           surplus-value-capital.puml
+' Companion notes: notes/surplus-value.md §6 — full stereotype legend: notes/stereotypes.md
+
+@startuml surplus-value-commodity
+title II. Commodity and value — dual character
+caption Simple determinations of commodity production. Value is a social relation, not a physical property.
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam ranksep 55
+skinparam nodesep 45
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+}
+
+abstract class LivingLabour <<transhistorical>> {
+  same activity, two social aspects
+}
+
+together {
+  abstract class ConcreteLabour <<transhistorical>> {
+    specific useful activity
+    qualitative
+  }
+  abstract class AbstractLabour <<abstract det.>> <<social relation>> <<historically specific>> {
+    homogeneous expenditure of labour-power
+    real social abstraction through exchange
+  }
+}
+
+class UseValue <<transhistorical>> {
+  material body of the commodity
+}
+
+class Commodity <<historically specific>> {
+  article of wealth produced for exchange
+}
+
+abstract class Value <<abstract det.>> <<social relation>> <<historically specific>> {
+  {abstract}
+  magnitude : socially necessary labour-time
+}
+
+together {
+  class ExchangeValue <<historically specific>> {
+    form of appearance of value
+    quantitative relation of commodities
+  }
+  class SociallyNecessaryLabourTime <<social relation>> <<historically specific>> {
+    labour-time under average conditions
+    of production and skill
+  }
+}
+
+class Money <<historically specific>> {
+  universal equivalent
+  independent form of value
+  price is value in money
+}
+
+class SimpleCommodityProduction <<historically specific>> {
+  producer owns means of production
+  sells own product
+  realises the full value — no surplus value
+}
+
+LivingLabour ..|> ConcreteLabour
+LivingLabour ..|> AbstractLabour
+ConcreteLabour --> UseValue : produces
+AbstractLabour --> Value : is the substance of
+Commodity *-- UseValue : bearer
+Commodity *-- Value : social form
+Value --> ExchangeValue : appears as
+Value --> SociallyNecessaryLabourTime : magnitude
+Money --|> Commodity : one commodity\nas general equivalent
+Money --> Value : necessary form\nof appearance
+SimpleCommodityProduction --> Commodity : produces\nand sells
+
+LivingLabour -[hidden]down-> Commodity
+Commodity -[hidden]down-> Value
+Value -[hidden]down-> Money
+
+note right of Value
+  Value cannot be found in the
+  physical or chemical properties
+  of a thing (SPGB; Marx).
+  It is a social property that
+  appears as a relation between things
+  — commodity fetishism.
+end note
+
+note bottom of AbstractLabour
+  Not a hidden essence inside labour.
+  Different concrete labours are actually
+  equated when products exchange as values.
+  The abstraction is social and historical,
+  not metaphysical.
+end note
+
+note bottom of SimpleCommodityProduction
+  SPGB tailor: owns tools and product,
+  sells the coat at its value — no surplus value.
+  Surplus value requires wage-labour,
+  not commodity exchange as such.
+end note
+
+@enduml

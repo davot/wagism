@@ -19,14 +19,20 @@ PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.
 
 ## Current scope
 
-1. [Marx’s theory of (surplus) value](models/surplus-value.puml) — notes in [notes/surplus-value.md](notes/surplus-value.md)
+1. Marx’s theory of (surplus) value — notes in [notes/surplus-value.md](notes/surplus-value.md), source in four files:
+   - [surplus-value-overview.puml](models/surplus-value-overview.puml) — the abstract-to-concrete spine
+   - [surplus-value-labour-process.puml](models/surplus-value-labour-process.puml) — I. material reproduction
+   - [surplus-value-commodity.puml](models/surplus-value-commodity.puml) — II. commodity and value
+   - [surplus-value-capital.puml](models/surplus-value-capital.puml) — III. wage-labour and capital
 
 Later increments can add competition and prices of production, accumulation, the state, and world market, always rising from these abstract determinations toward a richer concrete.
+
+![Surplus value overview](models/rendered/surplus-value-overview.svg)
 
 ## Rendering the diagrams
 
 ```bash
-plantuml -tsvg models/surplus-value.puml
+plantuml -tsvg -o rendered models/surplus-value-*.puml
 ```
 
-The source file contains several diagrams (overview, then three levels of concretion). SVG renderings are written to `models/rendered/` when that command is run.
+Each file is a single, self-contained `@startuml`/`@enduml` diagram — deliberately one diagram per file, not one file with several `@startuml` blocks, since several GitHub PlantUML viewers (and the public plantuml.com renderer) handle multi-diagram files unreliably. Rendered SVGs are committed under `models/rendered/` and embedded in the notes and this README, so the diagrams are visible on GitHub for everyone, independent of any browser extension.

@@ -1,0 +1,101 @@
+' Surplus value: class model — 1 of 4 (overview)
+' Siblings: surplus-value-labour-process.puml, surplus-value-commodity.puml,
+'           surplus-value-capital.puml
+' Companion notes: notes/surplus-value.md — full stereotype legend: notes/stereotypes.md
+'
+' Stereotypes (a type may carry more than one; see notes/stereotypes.md)
+'   transhistorical       — material conditions of human life; no specific social form
+'   historically specific — exists only under a definite social form (commodity
+'                           production or capitalism); not "recent", "bound to a
+'                           social form". Opposite of transhistorical.
+'   abstract det.         — simple, one-sided determination; never exists on its own.
+'                           A different cut to the one above: e.g. Value and
+'                           AbstractLabour are both abstract det. AND historically
+'                           specific (they are one-sided AND do not exist in every
+'                           society) — do not collapse the two cuts into one.
+'   social relation       — not a physical property of things
+'   personification       — individual as bearer of a class relation
+'
+' Colour rule: skinparam BackgroundColor picks the FIRST stereotype declared on a
+' class. Where a class carries several, the declaration order below is deliberate
+' (usually abstract det. or personification first) so the diagram's colour tracks
+' the class's primary pedagogical role, not merely its most recently-added tag.
+
+@startuml surplus-value-overview
+title Surplus value — rising from the abstract to the concrete
+caption Legend and full stereotype meanings: notes/stereotypes.md
+
+hide circle
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 70
+skinparam nodesep 40
+skinparam class {
+  BackgroundColor<<transhistorical>> #E8F5E9
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+package "I. Material reproduction\n(transhistorical labour process)" as P1 {
+  class Nature <<transhistorical>>
+  abstract class LabourProcess <<transhistorical>>
+  class UseValue <<transhistorical>>
+  class LabourPower <<transhistorical>>
+}
+
+package "II. Commodity-value form\n(simple determinations of exchange)" as P2 {
+  abstract class AbstractLabour <<abstract det.>> <<social relation>> <<historically specific>>
+  abstract class Value <<abstract det.>> <<social relation>> <<historically specific>>
+  class Commodity <<historically specific>>
+}
+
+package "III. Capitalist production\n(concrete: wage-labour and capital)" as P3 {
+  class WageLabourer <<personification>>
+  class Capitalist <<personification>>
+  class LabourPowerAsCommodity <<historically specific>>
+  class Capital <<historically specific>> <<social relation>>
+  class CapitalistProductionProcess <<historically specific>>
+  class SurplusValue <<historically specific>> <<social relation>>
+}
+
+' Force P1 and P2 onto the same rank, with P3 as the sink below both.
+' This keeps the two long cross-package hops (P1->P3, P2->P3) running
+' downward in parallel instead of arcing through or around P2's box.
+P1 -[hidden]right-> P2
+P1 -[hidden]down-> P3
+P2 -[hidden]down-> P3
+
+Nature --> LabourProcess : materials
+LabourPower --> LabourProcess : expended in
+LabourProcess --> UseValue : produces
+
+UseValue ..> Commodity : produced for exchange
+AbstractLabour --> Value : is the substance of
+Commodity *-- UseValue
+Commodity *-- Value
+
+LabourPower ..> LabourPowerAsCommodity : sold
+LabourProcess ..> CapitalistProductionProcess : + command\n+ valorization
+Value ..> Capital : + self-expansion
+WageLabourer --> LabourPowerAsCommodity : must sell
+Capitalist --> LabourPowerAsCommodity : buys
+Capitalist --> Capital : personifies
+CapitalistProductionProcess --> SurplusValue : produces
+Capital *-- SurplusValue
+
+note as NMethod
+  **Method (Grundrisse)**
+  Abstract types = simple determinations
+  that never exist on their own.
+  Concrete types = historically specific
+  forms: the concentration of many
+  determinations.
+  Thought reproduces the concrete;
+  it does not generate the real subject
+  (society in nature).
+end note
+
+@enduml

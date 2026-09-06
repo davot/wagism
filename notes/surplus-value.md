@@ -1,6 +1,6 @@
 # Surplus value — model notes
 
-Companion to [`models/surplus-value.puml`](../models/surplus-value.puml).
+Companion to four PlantUML source files: [overview](../models/surplus-value-overview.puml), [labour process](../models/surplus-value-labour-process.puml), [commodity](../models/surplus-value-commodity.puml), [capital](../models/surplus-value-capital.puml). Rendered images are embedded below each section and under [`models/rendered/`](../models/rendered/).
 
 These notes record what each type *is* in Marx’s materialist presentation, how abstract and concrete are used as modelling devices, and what is deliberately left out. They are not a substitute for *Capital*. They follow Marx, with the Socialist Party of Great Britain (SPGB) as a running check against both academic price theory and metaphysical readings of “value.”
 
@@ -76,18 +76,22 @@ A few refusals, so the types are not misread as hidden essences.
 
 ## 4. Presentation path (matches *Capital* I)
 
+![Surplus value — rising from the abstract to the concrete](../models/rendered/surplus-value-overview.svg)
+
 The four diagrams follow Marx’s order, which is also the order of rising concretion.
 
-1. **Overview** — which abstract types become which concrete types, and why there is no standalone “economy.”
-2. **Labour process** — humans and nature; use-value; labour-power as a capacity. Transhistorical. No value yet.
-3. **Commodity and value** — dual character; socially necessary labour-time; money as form of appearance; simple commodity production as a contrast case with *no* surplus value.
-4. **Wage-labour and capital** — labour-power as commodity; constant and variable capital; valorization; surplus value; rates.
+1. **[Overview](../models/surplus-value-overview.puml)** — which abstract types become which concrete types, and why there is no standalone “economy.”
+2. **[Labour process](../models/surplus-value-labour-process.puml)** — humans and nature; use-value; labour-power as a capacity. Transhistorical. No value yet.
+3. **[Commodity and value](../models/surplus-value-commodity.puml)** — dual character; socially necessary labour-time; money as form of appearance; simple commodity production as a contrast case with *no* surplus value.
+4. **[Wage-labour and capital](../models/surplus-value-capital.puml)** — labour-power as commodity; constant and variable capital; valorization; surplus value; rates.
 
 Do not start from “profit” or “price.” Those are later, more concrete expressions. Surplus value explains them; they do not explain surplus value.
 
 ---
 
 ## 5. Package I — material reproduction
+
+![I. Material reproduction — the labour process](../models/rendered/surplus-value-labour-process.svg)
 
 ### `Nature`
 
@@ -131,6 +135,8 @@ Past living labour fixed in a product. Tools are dead labour in a material sense
 
 ## 6. Package II — commodity and value
 
+![II. Commodity and value — dual character](../models/rendered/surplus-value-commodity.svg)
+
 ### `Commodity`
 
 An article of wealth *produced for exchange*. Composition, not inheritance from `UseValue`: a commodity *is* a use-value that, under these social conditions, is also a value. Wealth under capitalism appears as “an immense accumulation of commodities.”
@@ -172,6 +178,8 @@ Contrast class, taken from the SPGB tailor. The producer owns the means of produ
 ---
 
 ## 7. Package III — wage-labour and capital
+
+![III. Wage-labour and capital — the production of surplus value](../models/rendered/surplus-value-capital.svg)
 
 ### `CapitalistModeOfProduction`
 
