@@ -1,6 +1,6 @@
 # Surplus value — model notes
 
-Companion to four PlantUML source files: [overview](../models/surplus-value-overview.puml), [labour process](../models/surplus-value-labour-process.puml), [commodity](../models/surplus-value-commodity.puml), [capital](../models/surplus-value-capital.puml). Rendered images are embedded below each section and under [`models/rendered/`](../models/rendered/).
+Companion to four PlantUML source files: [overview](../models/surplus-value-overview.puml), [labour process](../models/surplus-value-labour-process.puml), [commodity](../models/surplus-value-commodity.puml), [capital](../models/surplus-value-capital.puml). Rendered images are embedded below each section and under [`models/rendered/`](../models/rendered/). Every relationship in these diagrams is indexed in [relationships.md](relationships.md); stereotypes are defined in [stereotypes.md](stereotypes.md).
 
 These notes record what each type *is* in Marx’s materialist presentation, how abstract and concrete are used as modelling devices, and what is deliberately left out. They are not a substitute for *Capital*. They follow Marx, with the Socialist Party of Great Britain (SPGB) as a running check against both academic price theory and metaphysical readings of “value.”
 

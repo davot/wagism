@@ -1,6 +1,6 @@
 # Accumulation of capital — model notes
 
-Companion to [`models/accumulation.puml`](../models/accumulation.puml). Full stereotype legend: [stereotypes.md](stereotypes.md). Presupposes [surplus-value.md](surplus-value.md): `Capital`, `SurplusValue`, and `Capitalist` are used here as already defined there.
+Companion to [`models/accumulation.puml`](../models/accumulation.puml). Full stereotype legend: [stereotypes.md](stereotypes.md); every relationship in this diagram is indexed in [relationships.md](relationships.md). Presupposes [surplus-value.md](surplus-value.md): `Capital`, `SurplusValue`, and `Capitalist` are used here as already defined there.
 
 This increment has one purpose: to show that the accumulation of capital is not the capitalist's personal preference, and not a matter that a government could decide differently by policy. It is a compulsion that many capitals in competition exert on whoever occupies the role of capitalist — a structural feature of the relation itself, not a subjective or political variable.
 

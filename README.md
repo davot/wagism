@@ -15,7 +15,7 @@ Marx distinguishes **abstract** determinations (simple, one-sided relations that
 
 The real subject — society in nature — remains outside the model. The diagrams are a way of appropriating that concrete in thought, not a metaphysics of self-moving concepts.
 
-PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.`, and the rest) are defined in [notes/stereotypes.md](notes/stereotypes.md).
+PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.`, and the rest) are defined in [notes/stereotypes.md](notes/stereotypes.md). Every relationship in every diagram — what it connects, what notation it uses, and why — is indexed in [notes/relationships.md](notes/relationships.md).
 
 ## Current scope
 

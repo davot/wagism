@@ -64,3 +64,5 @@ renders blue (the `abstract det.` colour), not pink. The pink `historically spec
 Marx’s method of rising from the abstract to the concrete (Grundrisse) is the other axis of the model. It is documented in [surplus-value.md](surplus-value.md) §2.
 
 A historically specific type is often *more concrete* than the transhistorical or abstract determination it specialises (`LabourProcess` → `CapitalistProductionProcess`; `LabourPower` → `LabourPowerAsCommodity`; `Value` → `Capital`). “More concrete” here means *more determinations concentrated*, not “more real.” The real subject — society in nature — was always already concrete.
+
+The relations that carry out this specialisation in the diagrams (generalization, composition, dependency, and the rest) are catalogued, diagram by diagram, in [relationships.md](relationships.md).
