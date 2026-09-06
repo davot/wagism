@@ -276,20 +276,22 @@ A later increment can add the averaging of profit rates and prices of production
 
 Capital advanced: £10,000, of which £7,500 constant and £2,500 variable. Assume, for the illustration, that the whole capital is consumed in the period.
 
-10,000 articles at 25s each → product worth £12,500.
+10,000 articles at 125p (£1.25) each → product worth £12,500.
 
-Per article (25s):
+Per article (125p):
 
 | Component | Amount | Role |
 | --- | --- | --- |
-| Materials and wear of machinery | 15s | transferred `c` |
-| Wages | 5s | replaced `v` |
-| Surplus | 5s | unpaid labour `s` |
+| Materials and wear of machinery | 75p | transferred `c` |
+| Wages | 25p | replaced `v` |
+| Surplus | 25p | unpaid labour `s` |
 
 - Increment on total capital: £2,500.
 - Rate of profit: 2,500 / 10,000 = 25%.
 - Rate of exploitation: 2,500 / 2,500 = 100%.
 - In labour-time, at that rate, half the week reproduces wages; half is surplus labour.
+
+*(The original 1962 article priced the article at 25 shillings — 15s materials, 5s wages, 5s surplus — in pre-decimal currency, where £1 = 20 shillings = 240 pence. Restated above in decimal currency, £1 = 100p, introduced in the UK in 1971: 25s → 125p; the three components and all ratios are unchanged.)*
 
 Where the same tailor owns the means of production, a coat embodying £6 materials/wear and £7 living labour sells at £13. The whole new value returns to the producer. No surplus value. The difference is the class relation, not the existence of a market.
 
