@@ -119,6 +119,7 @@ Both capitals tend to receive average profit on what they advance. Commerce prod
 
 ## 7. What is deferred
 
+- Barriers to entry as the field of `CapitalFlow` closes — modelled as `BarrierToEntry` in [concentration.md](concentration.md).
 - Market prices as fluctuations around prices of production.
 - The tendency of the rate of profit to fall as the average organic composition rises (*Capital* III, ch. 13–15).
 - Ground rent and the price of land as a further cut / capitalisation.

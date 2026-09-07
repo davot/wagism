@@ -14,13 +14,15 @@ This increment models only the **theory of (surplus) value**: how material wealt
 
 It does **not** yet model the state or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
 
-A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. It does not yet model the further consequences of competition (concentration and centralisation of capital, the reserve army of labour). Equalisation of profit rates and prices of production are modelled in [prices-of-production.md](prices-of-production.md).
+A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. Equalisation of profit rates is in [prices-of-production.md](prices-of-production.md). Concentration, centralisation, and the reserve army are in [concentration.md](concentration.md).
 
 A third increment, [credit and banking](finance.md), places finance in the same system: interest is a share of surplus value; commercial banks intermediate already-existing funds; only the central bank issues new fiat.
 
 A fourth increment, [fictitious capital](fictitious-capital.md), distinguishes real capital from capitalised titles (shares, government bonds): the paper is a claim on future surplus value, not a second factory.
 
 A fifth increment, [prices of production](prices-of-production.md), shows that competition levels the rate of profit across industrial and commercial capital and only redistributes the pool of surplus value.
+
+A sixth increment, [concentration, centralisation, and the reserve army](concentration.md), draws the general law: accumulation produces fewer, larger capitals and a surplus working population relative to capital’s demand for labour-power.
 
 ---
 
@@ -326,7 +328,7 @@ These belong to later, more concrete increments. They are not “corrections” 
 - Turnover, and financial institutions as shorteners of turnover beyond the intermediation already in [finance.md](finance.md).
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.
-- Reproduction schemas (Departments I/II), concentration and centralisation of capital, the reserve army of labour.
+- Reproduction schemas (Departments I/II). Concentration, centralisation, and the reserve army are in [concentration.md](concentration.md).
 - The state, world market, and crises as a concrete totality.
 - Credit-money as a further determination of money-as-IOU, without abandoning money as the form of value (Chambers). Fiat as inconvertible state money is already in [finance.md](finance.md).
 

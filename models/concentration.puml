@@ -1,0 +1,141 @@
+' Concentration, centralisation, and the reserve army: class model
+' Companion notes: notes/concentration.md — full stereotype legend: notes/stereotypes.md
+'
+' The rest of Capital I, ch. 25: accumulation enlarges individual capitals
+' (concentration); competition and credit fuse many into few (centralisation);
+' the demand for labour-power lags the growth of capital; a reserve army
+' is necessary to the relation, not a policy accident (Marx; SPGB).
+
+@startuml concentration
+title VIII. Concentration, centralisation, and the reserve army
+caption The general law of capitalist accumulation: notes/concentration.md
+
+hide circle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+  BackgroundColor<<abstract det.>> #E3F2FD
+}
+
+package "I. Accumulation continues" as P1 {
+  class AccumulationOfCapital <<historically specific>> {
+    capitalisation of surplus value
+    (full definition: accumulation.puml)
+  }
+  class CapitalistCompetition <<social relation>> <<historically specific>> {
+    many capitals
+    (full definition: accumulation.puml)
+  }
+  class Credit <<historically specific>> {
+    lever of centralisation
+    (banking: finance.puml)
+  }
+}
+
+package "II. Fewer, larger capitals" as P2 {
+  class ConcentrationOfCapital <<historically specific>> {
+    individual capitals grow
+    by their own accumulation
+  }
+  class CentralisationOfCapital <<historically specific>> {
+    already-existing capitals fused
+    expropriation of capitalist
+    by capitalist
+  }
+  class BarrierToEntry <<historically specific>> {
+    minimum capital to compete
+    rises with scale
+  }
+}
+
+package "III. Composition and the demand for labour" as P3 {
+  class OrganicComposition <<social relation>> <<historically specific>> {
+    c / v
+    tends to rise with accumulation
+    (also in prices-of-production.puml)
+  }
+  class DemandForLabourPower <<historically specific>> {
+    grows more slowly than
+    total capital
+  }
+}
+
+package "IV. The reserve army" as P4 {
+  class WageLabourer <<personification>> {
+    employed or disposable
+    (full definition: surplus-value-capital.puml)
+  }
+  class ReserveArmyOfLabour <<historically specific>> <<social relation>> {
+    surplus population relative
+    to capital's need for v
+    expands and contracts with the cycle
+  }
+  class RelativeSurplusPopulation <<historically specific>> {
+    floating, latent, stagnant
+    produced by accumulation itself
+  }
+}
+
+class UnemploymentAsPolicyFailure <<abstract det.>> {
+  {abstract}
+  rejected claim: joblessness is
+  a correctable mistake of government
+  or an absolute over-population
+}
+
+AccumulationOfCapital --> ConcentrationOfCapital : enlarges individual capitals as
+CapitalistCompetition --> CentralisationOfCapital : fuses capitals as
+Credit --> CentralisationOfCapital : accelerates
+ConcentrationOfCapital --> BarrierToEntry : raises
+CentralisationOfCapital --> BarrierToEntry : raises
+AccumulationOfCapital --> OrganicComposition : tends to raise
+OrganicComposition --> DemandForLabourPower : limits
+ConcentrationOfCapital --> DemandForLabourPower : fewer workers per capital
+DemandForLabourPower --> ReserveArmyOfLabour : leaves a surplus as
+RelativeSurplusPopulation --|> ReserveArmyOfLabour
+ReserveArmyOfLabour o-- WageLabourer : includes the disposable
+ReserveArmyOfLabour --> WageLabourer : disciplines wages of
+UnemploymentAsPolicyFailure ..> ReserveArmyOfLabour : mistakes a necessary form for
+AccumulationOfCapital ..> UnemploymentAsPolicyFailure : produces the surplus population\n(not a policy error)
+CapitalistCompetition ..> UnemploymentAsPolicyFailure : cannot abolish while\nmany capitals accumulate
+BarrierToEntry ..> CapitalistCompetition : restricts who can enter
+
+P1 -[hidden]right-> P2
+P2 -[hidden]down-> P3
+P3 -[hidden]right-> P4
+
+note as NLaw
+  **General law (Capital I, ch. 25)**
+  The same accumulation that piles up
+  wealth as capital produces, relatively,
+  a surplus working population.
+  Not Malthus: not too many people
+  for nature — too many for capital's
+  demand for labour-power.
+end note
+
+note bottom of CentralisationOfCapital
+  Concentration needs growth of social
+  capital. Centralisation does not:
+  it redistributes existing capitals.
+  Credit is a weapon in that war.
+end note
+
+note right of ReserveArmyOfLabour
+  Necessary to sudden expansion
+  and to holding wages within
+  limits compatible with
+  valorization. "Full employment"
+  as a lasting state is another
+  simple-reproduction-style baseline
+  that accumulation rules out.
+end note
+
+@enduml
