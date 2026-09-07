@@ -1,0 +1,165 @@
+' Finance and banking: class model
+' Companion notes: notes/finance.md — full stereotype legend: notes/stereotypes.md
+'
+' Role of credit in wage-labour and capital (Marx, Capital III; SPGB).
+' Commercial banks are intermediaries: they lend existing funds (deposits,
+' money-market borrowing, own capital). They do not create purchasing power
+' out of thin air. Only the reserve / central bank issues new fiat currency.
+
+@startuml finance
+title V. Credit and banking — interest as a share of surplus value
+caption Commercial banks intermediate; only the central bank issues fiat: notes/finance.md
+
+hide circle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+}
+
+package "I. Surplus value is produced in production" as P1 {
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    (full definition: surplus-value-capital.puml)
+  }
+  class Capital <<historically specific>> <<social relation>> {
+    value that valorizes itself
+    (full definition: surplus-value-capital.puml)
+  }
+  class Capitalist <<personification>> {
+    personification of industrial capital
+  }
+}
+
+package "II. Sharing of surplus value" as P2 {
+  class IndustrialProfit <<historically specific>> {
+    part of s remaining with
+    the functioning capitalist
+  }
+  class Interest <<historically specific>> <<social relation>> {
+    part of s paid for the use
+    of money-capital
+    not a second source of value
+  }
+  class InterestBearingCapital <<historically specific>> <<social relation>> {
+    money lent as capital
+    circuit : M – M'
+  }
+}
+
+package "III. Commercial bank (intermediary)" as P3 {
+  class CommercialBank <<historically specific>> {
+    centralises lenders and borrowers
+    lends only funds it has obtained
+    profit = interest received − interest paid
+  }
+  class Banker <<personification>> {
+    personification of
+    interest-bearing capital
+  }
+  class IdleMoneyCapital <<historically specific>> {
+    purchasing power generated
+    in production, not yet spent
+  }
+  class Deposit <<historically specific>> {
+    retail funds placed with the bank
+    a loan from depositor to bank
+  }
+  class MoneyMarket <<historically specific>> {
+    wholesale borrowing
+    between banks and institutions
+  }
+  class Loan <<historically specific>> {
+    advance of already-existing funds
+    book entry is double-entry, not new wealth
+  }
+}
+
+package "IV. Central / reserve bank (fiat issue)" as P4 {
+  class CentralBank <<historically specific>> {
+    issues legal-tender currency
+    holds commercial banks' settlement accounts
+  }
+  class FiatCurrency <<historically specific>> {
+    inconvertible state money
+    notes, coin, reserve balances
+  }
+  class BankReserves <<historically specific>> {
+    balances at the central bank
+    used to settle inter-bank payments
+    only the central bank can create these
+  }
+}
+
+class ThinAirTheory <<abstract det.>> {
+  {abstract}
+  rejected claim: a commercial bank
+  conjures new purchasing power
+  by writing a deposit against a loan
+}
+
+Capital *-- SurplusValue : appropriates
+SurplusValue --> IndustrialProfit : part retained as
+SurplusValue --> Interest : part paid as
+InterestBearingCapital --> Interest : claims
+Capitalist --> IndustrialProfit : receives
+Capitalist --> Interest : pays out of s
+Capitalist --> Loan : borrows
+
+IdleMoneyCapital --> Deposit : placed as
+CommercialBank --> Deposit : borrows (retail)
+CommercialBank --> MoneyMarket : borrows (wholesale)
+CommercialBank --> Loan : advances obtained funds as
+Banker --> CommercialBank : personifies
+IdleMoneyCapital --> Loan : activated as\n(not created)
+CommercialBank --> Interest : collects the spread
+
+CentralBank --> FiatCurrency : issues
+CentralBank --> BankReserves : creates
+CommercialBank --> BankReserves : holds / settles with
+Loan --> BankReserves : when spent, settled by\ntransfer of
+ThinAirTheory ..> Loan : mistakes the book entry for
+CommercialBank ..> ThinAirTheory : cannot enact
+BankReserves ..> ThinAirTheory : settlement rules out
+
+P1 -[hidden]right-> P2
+P2 -[hidden]right-> P3
+P3 -[hidden]down-> P4
+ThinAirTheory -[hidden]up-> P4
+
+note as NRole
+  **Banks do not produce value (Capital III)**
+  A bank centralises money-capital of
+  lenders and of borrowers. Its profit
+  is the difference between the rate
+  at which it borrows and the rate
+  at which it lends — a share of
+  surplus value already produced.
+end note
+
+note bottom of ThinAirTheory
+  BoE 2014 / Bundesbank passages that
+  "lending creates deposits" describe
+  double-entry bookkeeping. The same
+  articles state that the loan must
+  then be **funded** (reserves move
+  when the borrower spends). That
+  funding is existing money, not thin air.
+end note
+
+note right of CentralBank
+  Fiat is managed state money.
+  Only this institution issues new
+  currency. A commercial bank that
+  credits an account still has to
+  obtain the funds that leave it.
+end note
+
+@enduml

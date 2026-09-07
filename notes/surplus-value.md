@@ -12,9 +12,11 @@ Capitalism, in the sense used here, is a historically specific social system: cl
 
 This increment models only the **theory of (surplus) value**: how material wealth takes the commodity form; how value is a social relation measured by socially necessary labour-time; how labour-power becomes a commodity; and how unpaid labour appears as surplus value, the sole source of profit, interest, and rent.
 
-It does **not** yet model prices of production, credit, the state, or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
+It does **not** yet model prices of production, the state, or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
 
 A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. It does not yet model the further consequences of competition (equalisation of profit rates, prices of production, concentration and centralisation of capital, the reserve army of labour).
+
+A third increment, [credit and banking](finance.md), places finance in the same system: interest is a share of surplus value; commercial banks intermediate already-existing funds; only the central bank issues new fiat.
 
 ---
 
@@ -171,7 +173,7 @@ Complex labour counts as multiplied simple labour. How the reduction is effected
 
 A commodity socially excluded to serve as universal equivalent. Independent form of appearance of value. Price is the monetary expression of value. Capital in its “pure form” is money-capital (SPGB): the circuit begins and ends with money.
 
-This increment stays with Marx’s presentation of money as the necessary form of value. A later, more concrete model can add credit-money and banks without deleting this determination.
+This increment stays with Marx’s presentation of money as the necessary form of value. A later increment, [credit and banking](finance.md), adds fiat currency and banks without deleting this determination: commercial banks intermediate already-existing purchasing power; only the central bank issues new fiat.
 
 ### `SimpleCommodityProduction`
 
@@ -316,13 +318,13 @@ A model that silently dropped `Nature`, `UseValue`, or `LabourProcess` would hav
 These belong to later, more concrete increments. They are not “corrections” of this model.
 
 - Prices of production and the average rate of profit (*Capital* III).
-- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital, interest-bearing capital. (The compulsion to accumulate that competition exerts on the individual capitalist is modelled in [accumulation.md](accumulation.md); its further consequences are not.)
-- Turnover, commercial and financial institutions as shorteners of turnover.
+- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital. (The compulsion to accumulate that competition exerts on the individual capitalist is modelled in [accumulation.md](accumulation.md). Interest-bearing capital and the commercial bank as intermediary are modelled in [finance.md](finance.md); fictitious capital and crises are not.)
+- Turnover, and financial institutions as shorteners of turnover beyond the intermediation already in [finance.md](finance.md).
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.
 - Reproduction schemas (Departments I/II), concentration and centralisation of capital, the reserve army of labour.
 - The state, world market, and crises as a concrete totality.
-- Credit-money (Chambers’s emphasis on money as a credit/debt relation can be taken up there without abandoning money as the form of value).
+- Credit-money as a further determination of money-as-IOU, without abandoning money as the form of value (Chambers). Fiat as inconvertible state money is already in [finance.md](finance.md).
 
 ---
 

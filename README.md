@@ -25,8 +25,9 @@ PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.
    - [surplus-value-commodity.puml](models/surplus-value-commodity.puml) — II. commodity and value
    - [surplus-value-capital.puml](models/surplus-value-capital.puml) — III. wage-labour and capital
 2. Accumulation of capital — why accumulation is a compulsion of competition among many capitals, not a policy choice — notes in [notes/accumulation.md](notes/accumulation.md), source in [accumulation.puml](models/accumulation.puml)
+3. Credit and banking — interest as a share of surplus value; commercial banks intermediate, only the central bank issues fiat — notes in [notes/finance.md](notes/finance.md), source in [finance.puml](models/finance.puml)
 
-Later increments can add reproduction schemas, prices of production, credit, the state, and world market, always rising from these abstract determinations toward a richer concrete.
+Later increments can add reproduction schemas, prices of production, fictitious capital, the state, and world market, always rising from these abstract determinations toward a richer concrete.
 
 ![Surplus value overview](models/rendered/surplus-value-overview.svg)
 

@@ -2,7 +2,7 @@
 
 A complete inventory of every relationship drawn in the diagrams, organised by diagram, plus the notation used to draw them. Companion to [stereotypes.md](stereotypes.md) (which documents the *classes*); this file documents the *lines between them*.
 
-This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md) and [accumulation.md](accumulation.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
+This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), and [finance.md](finance.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
 
 ---
 
@@ -154,6 +154,41 @@ Two things to notice in this diagram's relations specifically, since they carry 
 
 ---
 
+## VI. Credit and banking ([finance.puml](../models/finance.puml))
+
+| A | | B | Label |
+| --- | --- | --- | --- |
+| `Capital` | `*--` | `SurplusValue` | appropriates |
+| `SurplusValue` | `-->` | `IndustrialProfit` | part retained as |
+| `SurplusValue` | `-->` | `Interest` | part paid as |
+| `InterestBearingCapital` | `-->` | `Interest` | claims |
+| `Capitalist` | `-->` | `IndustrialProfit` | receives |
+| `Capitalist` | `-->` | `Interest` | pays out of s |
+| `Capitalist` | `-->` | `Loan` | borrows |
+| `IdleMoneyCapital` | `-->` | `Deposit` | placed as |
+| `CommercialBank` | `-->` | `Deposit` | borrows (retail) |
+| `CommercialBank` | `-->` | `MoneyMarket` | borrows (wholesale) |
+| `CommercialBank` | `-->` | `Loan` | advances obtained funds as |
+| `Banker` | `-->` | `CommercialBank` | personifies |
+| `IdleMoneyCapital` | `-->` | `Loan` | activated as (not created) |
+| `CommercialBank` | `-->` | `Interest` | collects the spread |
+| `CentralBank` | `-->` | `FiatCurrency` | issues |
+| `CentralBank` | `-->` | `BankReserves` | creates |
+| `CommercialBank` | `-->` | `BankReserves` | holds / settles with |
+| `Loan` | `-->` | `BankReserves` | when spent, settled by transfer of |
+| `ThinAirTheory` | `..>` | `Loan` | mistakes the book entry for |
+| `CommercialBank` | `..>` | `ThinAirTheory` | cannot enact |
+| `BankReserves` | `..>` | `ThinAirTheory` | settlement rules out |
+
+The load-bearing claims of this increment sit on two clusters of arrows (see [finance.md](finance.md)):
+
+- `SurplusValue --> Interest` and `CommercialBank --> Interest : collects the spread` say that banking profit is a *share* of unpaid labour, not a second source. That is why there is no arrow from `Loan` or `CommercialBank` to `SurplusValue` labelled "produces."
+- `CentralBank --> FiatCurrency` / `--> BankReserves` is the only place new currency is issued. `Loan --> BankReserves : when spent, settled by transfer of` and `BankReserves ..> ThinAirTheory` are the funding constraint: the book entry that pairs a loan with a deposit is not the central bank's fiat issue.
+
+`ThinAirTheory` is a contrast class, like `SimpleReproduction` and `SimpleCommodityProduction`: a determination the real relation rules out, typed so the denial is visible in the diagram and not only in the notes.
+
+---
+
 ## Cross-diagram note: classes that recur
 
-`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.
+`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced only in finance.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.
