@@ -1,0 +1,145 @@
+' Prices of production: class model
+' Companion notes: notes/prices-of-production.md — full stereotype legend: notes/stereotypes.md
+'
+' Competition among many capitals forces a general rate of profit and
+' prices of production. That only redistributes surplus value already
+' produced. Commercial capital takes the same average; shop labour
+' creates no s (Marx, Capital III, Part 2; SPGB).
+
+@startuml prices-of-production
+title VII. Prices of production — surplus value redistributed, not replaced
+caption Competition levels the rate of profit; it does not create s: notes/prices-of-production.md
+
+hide circle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+}
+
+package "I. Surplus value is still produced in production" as P1 {
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    social pool : Σs
+    (full definition: surplus-value-capital.puml)
+  }
+  class IndustrialCapital <<historically specific>> <<social relation>> {
+    capital in production
+    c + v advanced
+    produces s
+  }
+}
+
+package "II. Why sale at value cannot last" as P2 {
+  class OrganicComposition <<social relation>> <<historically specific>> {
+    c / v
+    differs by branch
+  }
+  class CostPrice <<historically specific>> {
+    c + v used up
+    not yet profit
+  }
+  class SaleAtValue <<abstract det.>> {
+    {abstract}
+    limiting case: commodities
+    exchange at their values
+    rates of profit stay unequal
+  }
+}
+
+package "III. Competition forms a general rate" as P3 {
+  class CapitalistCompetition <<social relation>> <<historically specific>> {
+    many capitals
+    (full definition: accumulation.puml)
+  }
+  class CapitalFlow <<historically specific>> {
+    capital moves toward
+    the higher rate of profit
+  }
+  class GeneralRateOfProfit <<social relation>> <<historically specific>> {
+    tendency : Σs / Σ(c + v)
+    not a political average
+  }
+  class AverageProfit <<historically specific>> {
+    general rate × capital advanced
+    Σ average profit = Σs
+  }
+  class PriceOfProduction <<historically specific>> {
+    cost-price + average profit
+    the form value takes
+    under competition of many capitals
+  }
+}
+
+package "IV. The same average, including commerce" as P4 {
+  class CommercialCapital <<historically specific>> <<social relation>> {
+    capital in buying and selling
+    produces no s
+  }
+  class CommercialProfit <<historically specific>> {
+    share of s
+    not a second source
+  }
+  class IndustrialProfit <<historically specific>> {
+    share of s remaining
+    with functioning industrial capital
+    (also in finance.puml)
+  }
+}
+
+IndustrialCapital *-- SurplusValue : appropriates
+IndustrialCapital --> OrganicComposition : has
+IndustrialCapital --> CostPrice : advances
+SaleAtValue --> OrganicComposition : would leave rates\nunequal given
+CapitalistCompetition --> CapitalFlow : compels
+CapitalFlow --> SaleAtValue : rules out as\na lasting state
+CapitalFlow --> GeneralRateOfProfit : forms
+SurplusValue --> GeneralRateOfProfit : social pool Σs
+GeneralRateOfProfit --> AverageProfit : determines
+CostPrice --> PriceOfProduction : plus average profit
+AverageProfit --> PriceOfProduction : enters
+AverageProfit --> SurplusValue : exhausts the pool\n(does not enlarge)
+IndustrialCapital --> AverageProfit : tends to receive
+CommercialCapital --> AverageProfit : tends to receive
+IndustrialCapital --> IndustrialProfit : receives as
+CommercialCapital --> CommercialProfit : receives as
+IndustrialProfit --|> AverageProfit
+CommercialProfit --|> AverageProfit
+IndustrialCapital --> CommercialCapital : sells below\nfinal price so both
+CapitalistCompetition ..> CommercialCapital : same coercive law
+
+P1 -[hidden]right-> P2
+P2 -[hidden]right-> P3
+P3 -[hidden]down-> P4
+
+note as NPool
+  **One pool, many rates become one rate**
+  High c/v branches capture more profit
+  than they produce in s; low c/v
+  branches capture less. The deviations
+  cancel. Total profit = total surplus
+  value. Labour remains the source.
+end note
+
+note bottom of SaleAtValue
+  Useful only as a baseline (Capital III,
+  ch. 8–9): isolate what competition
+  adds. Under real mobility of capital
+  it cannot persist.
+end note
+
+note right of CommercialCapital
+  If retailing paid more than
+  manufacturing, capital would leave
+  the factory for the shop until the
+  rates came into line. Shop labour
+  still creates no s.
+end note
+
+@enduml

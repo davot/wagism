@@ -12,13 +12,15 @@ Capitalism, in the sense used here, is a historically specific social system: cl
 
 This increment models only the **theory of (surplus) value**: how material wealth takes the commodity form; how value is a social relation measured by socially necessary labour-time; how labour-power becomes a commodity; and how unpaid labour appears as surplus value, the sole source of profit, interest, and rent.
 
-It does **not** yet model prices of production, the state, or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
+It does **not** yet model the state or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
 
-A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. It does not yet model the further consequences of competition (equalisation of profit rates, prices of production, concentration and centralisation of capital, the reserve army of labour).
+A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. It does not yet model the further consequences of competition (concentration and centralisation of capital, the reserve army of labour). Equalisation of profit rates and prices of production are modelled in [prices-of-production.md](prices-of-production.md).
 
 A third increment, [credit and banking](finance.md), places finance in the same system: interest is a share of surplus value; commercial banks intermediate already-existing funds; only the central bank issues new fiat.
 
 A fourth increment, [fictitious capital](fictitious-capital.md), distinguishes real capital from capitalised titles (shares, government bonds): the paper is a claim on future surplus value, not a second factory.
+
+A fifth increment, [prices of production](prices-of-production.md), shows that competition levels the rate of profit across industrial and commercial capital and only redistributes the pool of surplus value.
 
 ---
 
@@ -272,7 +274,7 @@ These are operations on `CapitalistProductionProcess` in the diagram, not extra 
 
 The manufacturer’s “25% profit” in the SPGB example is `s / (c + v)`. The rate of exploitation in that example is `s / v` = 100%. Confusing the two conceals the source of the increment.
 
-A later increment can add the averaging of profit rates and prices of production (*Capital* III). That modifies how surplus value is *shared* among capitals; it does not replace labour as the source of the surplus.
+The averaging of profit rates and prices of production (*Capital* III) is modelled in [prices-of-production.md](prices-of-production.md). That modifies how surplus value is *shared* among capitals; it does not replace labour as the source of the surplus.
 
 ---
 
@@ -319,8 +321,8 @@ A model that silently dropped `Nature`, `UseValue`, or `LabourProcess` would hav
 
 These belong to later, more concrete increments. They are not “corrections” of this model.
 
-- Prices of production and the average rate of profit (*Capital* III).
-- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital. (The compulsion to accumulate is in [accumulation.md](accumulation.md); interest-bearing capital is in [finance.md](finance.md); fictitious capital is in [fictitious-capital.md](fictitious-capital.md); crises are not.)
+- The fuller theory of competition among many capitals beyond the average rate: merchant’s capital as a full circuit. (The compulsion to accumulate is in [accumulation.md](accumulation.md); interest-bearing capital is in [finance.md](finance.md); fictitious capital is in [fictitious-capital.md](fictitious-capital.md); prices of production and the commercial share of the average rate are in [prices-of-production.md](prices-of-production.md); crises are not.)
+- The tendency of the rate of profit to fall (*Capital* III, Part 3).
 - Turnover, and financial institutions as shorteners of turnover beyond the intermediation already in [finance.md](finance.md).
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.
@@ -339,7 +341,7 @@ These belong to later, more concrete increments. They are not “corrections” 
 - *Capital* I, ch. 4–6 — general formula of capital; labour-power as commodity.
 - *Capital* I, ch. 7–9 — labour process and valorization; constant and variable capital; rate of surplus value.
 - *Capital* I, ch. 10, 12, 16 — working day; relative surplus value; absolute and relative surplus value.
-- *Capital* III, ch. 9, 13–15 — prices of production; tendency of the rate of profit (deferred, but used by the SPGB to distinguish `s/v` from `s/(c+v)`).
+- *Capital* III, ch. 9, 13–15 — prices of production (now [prices-of-production.md](prices-of-production.md)); tendency of the rate of profit (still deferred). Used by the SPGB to distinguish `s/v` from `s/(c+v)`.
 
 **Socialist Party of Great Britain**
 

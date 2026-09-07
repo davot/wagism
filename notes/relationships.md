@@ -2,7 +2,7 @@
 
 A complete inventory of every relationship drawn in the diagrams, organised by diagram, plus the notation used to draw them. Companion to [stereotypes.md](stereotypes.md) (which documents the *classes*); this file documents the *lines between them*.
 
-This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), [finance.md](finance.md), and [fictitious-capital.md](fictitious-capital.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
+This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), [finance.md](finance.md), [fictitious-capital.md](fictitious-capital.md), and [prices-of-production.md](prices-of-production.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
 
 ---
 
@@ -222,6 +222,39 @@ The load-bearing claims (see [fictitious-capital.md](fictitious-capital.md)):
 
 ---
 
+## VIII. Prices of production ([prices-of-production.puml](../models/prices-of-production.puml))
+
+| A | | B | Label |
+| --- | --- | --- | --- |
+| `IndustrialCapital` | `*--` | `SurplusValue` | appropriates |
+| `IndustrialCapital` | `-->` | `OrganicComposition` | has |
+| `IndustrialCapital` | `-->` | `CostPrice` | advances |
+| `SaleAtValue` | `-->` | `OrganicComposition` | would leave rates unequal given |
+| `CapitalistCompetition` | `-->` | `CapitalFlow` | compels |
+| `CapitalFlow` | `-->` | `SaleAtValue` | rules out as a lasting state |
+| `CapitalFlow` | `-->` | `GeneralRateOfProfit` | forms |
+| `SurplusValue` | `-->` | `GeneralRateOfProfit` | social pool Σs |
+| `GeneralRateOfProfit` | `-->` | `AverageProfit` | determines |
+| `CostPrice` | `-->` | `PriceOfProduction` | plus average profit |
+| `AverageProfit` | `-->` | `PriceOfProduction` | enters |
+| `AverageProfit` | `-->` | `SurplusValue` | exhausts the pool (does not enlarge) |
+| `IndustrialCapital` | `-->` | `AverageProfit` | tends to receive |
+| `CommercialCapital` | `-->` | `AverageProfit` | tends to receive |
+| `IndustrialCapital` | `-->` | `IndustrialProfit` | receives as |
+| `CommercialCapital` | `-->` | `CommercialProfit` | receives as |
+| `IndustrialProfit` | `--\|>` | `AverageProfit` | *(form of)* |
+| `CommercialProfit` | `--\|>` | `AverageProfit` | *(form of)* |
+| `IndustrialCapital` | `-->` | `CommercialCapital` | sells below final price so both |
+| `CapitalistCompetition` | `..>` | `CommercialCapital` | same coercive law |
+
+The load-bearing claims (see [prices-of-production.md](prices-of-production.md)):
+
+- `AverageProfit --> SurplusValue : exhausts the pool (does not enlarge)` is the denial that competition creates value. High `c/v` branches capture more profit than they produce in `s`; low `c/v` branches capture less; the deviations cancel.
+- `SaleAtValue` is a contrast class: sale at values would leave unequal rates; `CapitalFlow` rules that out.
+- `CommercialProfit --\|> AverageProfit` with no arrow from commercial capital to `SurplusValue` labelled "produces" repeats the clerk/import point: commerce takes the same average and creates no `s`.
+
+---
+
 ## Cross-diagram note: classes that recur
 
-`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced in finance.puml; `FictitiousCapital` and the title types only in fictitious-capital.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.
+`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced in finance.puml; `FictitiousCapital` and the title types only in fictitious-capital.puml; `PriceOfProduction` and the average-rate types only in prices-of-production.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.

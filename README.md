@@ -27,8 +27,9 @@ PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.
 2. Accumulation of capital — why accumulation is a compulsion of competition among many capitals, not a policy choice — notes in [notes/accumulation.md](notes/accumulation.md), source in [accumulation.puml](models/accumulation.puml)
 3. Credit and banking — interest as a share of surplus value; commercial banks intermediate, only the central bank issues fiat — notes in [notes/finance.md](notes/finance.md), source in [finance.puml](models/finance.puml)
 4. Fictitious capital — shares and government bonds as capitalised claims on future surplus value, not a second real capital — notes in [notes/fictitious-capital.md](notes/fictitious-capital.md), source in [fictitious-capital.puml](models/fictitious-capital.puml)
+5. Prices of production — competition levels the rate of profit and redistributes surplus value; it does not create it — notes in [notes/prices-of-production.md](notes/prices-of-production.md), source in [prices-of-production.puml](models/prices-of-production.puml)
 
-Later increments can add reproduction schemas, prices of production, crises, the state, and world market, always rising from these abstract determinations toward a richer concrete.
+Later increments can add reproduction schemas, the falling rate of profit, crises, the state, and world market, always rising from these abstract determinations toward a richer concrete.
 
 ![Surplus value overview](models/rendered/surplus-value-overview.svg)
 

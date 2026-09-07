@@ -132,9 +132,9 @@ The same refusals as surplus-value.md §3, applied to finance:
 - Derivatives and further layers of titles — the same capitalisation iterated ([fictitious-capital.md](fictitious-capital.md) models the share and the government bond).
 - The credit cycle, overtrading, and crises as the point at which claims cannot be validated in production.
 - Quantitative easing and other concrete central-bank operations (asset purchases that swap one existing asset for newly issued reserves).
-- Merchant’s capital, and the further sharing of surplus value as commercial profit.
+- Merchant’s capital as a full circuit beyond the commercial share of the average rate (that share is in [prices-of-production.md](prices-of-production.md)).
 - The state as taxer, borrower, and spender — beyond its role here as the backer of fiat.
-- A full theory of prices of production and the average rate of profit, which would show how interest, industrial profit, and rent are shares of a *redistributed* surplus, not only of the surplus of one capital.
+- Rent as a further share of redistributed surplus value. How industrial and commercial profit tend toward one average rate is modelled in [prices-of-production.md](prices-of-production.md).
 
 ---
 
