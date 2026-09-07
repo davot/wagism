@@ -19,7 +19,7 @@ It models:
 - `ReserveArmyOfLabour` / `RelativeSurplusPopulation` as a form necessary to accumulation (expansion, contraction, discipline of wages);
 - `UnemploymentAsPolicyFailure` as a contrast class: the rejected claim that joblessness is a policy error or an absolute over-population.
 
-It does **not** model the falling rate of profit as a law of the average rate (*Capital* III, Part 3), crises as a concrete totality, reproduction schemas, or the state as an employment-manager. Those presuppose this increment.
+It does **not** model the falling rate of profit as a law of the average rate (*Capital* III, Part 3), crises as a concrete totality, or reproduction schemas. The state as public power (including what it can and cannot do to the reserve) is in [state.md](state.md). Those other items presuppose this increment.
 
 ---
 
@@ -102,7 +102,7 @@ Contrast class, like `SaleAtValue` and `ThinAirTheory`. Joblessness as a correct
 - The tendency of the rate of profit to fall as the social organic composition rises (*Capital* III, ch. 13–15).
 - Crises: the reserve swelling as claims fail to be validated.
 - Reproduction schemas (how the physical and value replacement of `c` and `v` must balance).
-- The state as manager of unemployment and of “full employment” policy.
+- The state as public power, including what a government can and cannot do to the reserve — now [state.md](state.md). This increment keeps the claim that the form is necessary; the state increment types the power that tightens or loosens it.
 - A detailed typology of the latent surplus (e.g. household labour, migration) beyond Marx’s three forms.
 
 ---

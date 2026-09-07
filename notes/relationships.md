@@ -2,7 +2,7 @@
 
 A complete inventory of every relationship drawn in the diagrams, organised by diagram, plus the notation used to draw them. Companion to [stereotypes.md](stereotypes.md) (which documents the *classes*); this file documents the *lines between them*.
 
-This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), [finance.md](finance.md), [fictitious-capital.md](fictitious-capital.md), [prices-of-production.md](prices-of-production.md), and [concentration.md](concentration.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
+This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), [finance.md](finance.md), [fictitious-capital.md](fictitious-capital.md), [prices-of-production.md](prices-of-production.md), [concentration.md](concentration.md), and [state.md](state.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
 
 ---
 
@@ -284,6 +284,40 @@ The load-bearing claims (see [concentration.md](concentration.md)):
 
 ---
 
+## X. The capitalist state ([state.puml](../models/state.puml))
+
+| A | | B | Label |
+| --- | --- | --- | --- |
+| `CapitalistModeOfProduction` | `*--` | `CapitalistClass` | *(constitutes)* |
+| `CapitalistModeOfProduction` | `*--` | `CapitalistState` | *(constitutes)* |
+| `CapitalistClass` | `-->` | `CapitalistState` | its public power |
+| `CapitalistState` | `-->` | `Tax` | levies |
+| `Tax` | `-->` | `SurplusValue` | mainly deducted from |
+| `Wage` | `-->` | `Tax` | may channel |
+| `Tax` | `-->` | `Wage` | can stick as a cut in |
+| `CapitalistState` | `-->` | `ForceAndLaw` | funds |
+| `CapitalistState` | `-->` | `PublicInfrastructure` | funds |
+| `CapitalistState` | `-->` | `StateReproductionOfLP` | funds |
+| `CapitalistState` | `-->` | `CentralBank` | backs |
+| `PublicInfrastructure` | `-->` | `SurplusValue` | conditions of production (does not create s) |
+| `StateReproductionOfLP` | `-->` | `Wage` | enters reproduction of |
+| `CapitalistState` | `-->` | `StateCapital` | may own as |
+| `StateBureaucracy` | `-->` | `StateCapital` | personifies |
+| `StateCapital` | `--\|>` | `Capital` | *(is a kind of)* |
+| `StateCapital` | `-->` | `SurplusValue` | still appropriates if it exploits LP |
+| `StateAsNeutralArbiter` | `..>` | `CapitalistState` | mistakes a class power for |
+| `TaxCreatesValue` | `..>` | `Tax` | mistakes a share for a source |
+| `NationalisationAbolishesCapital` | `..>` | `StateCapital` | mistakes a change of title for |
+
+The load-bearing claims (see [state.md](state.md)):
+
+- `CapitalistClass --> CapitalistState : its public power` is the Manifesto claim: the state is a class machine, not `StateAsNeutralArbiter`.
+- `Tax --> SurplusValue` and the two arrows to/from `Wage` separate *source* from *channel*. `TaxCreatesValue` is the rejected fourth origin.
+- `StateCapital --|> Capital` is state capitalism: public title is a change of personification (`StateBureaucracy`), not abolition (`NationalisationAbolishesCapital`).
+- `PublicInfrastructure --> SurplusValue : conditions of production (does not create s)` repeats the clerk/bank cut for state spending.
+
+---
+
 ## Cross-diagram note: classes that recur
 
-`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced in finance.puml; `FictitiousCapital` and the title types only in fictitious-capital.puml; `PriceOfProduction` and the average-rate types only in prices-of-production.puml; `ReserveArmyOfLabour` and the concentration types only in concentration.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.
+`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced in finance.puml; `FictitiousCapital` and the title types only in fictitious-capital.puml; `PriceOfProduction` and the average-rate types only in prices-of-production.puml; `ReserveArmyOfLabour` and the concentration types only in concentration.puml; `CapitalistState`, `StateCapital`, and the tax-incidence types only in state.puml — `Tax` is introduced as a stub in fictitious-capital.puml and defined as a relation of the state in state.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.

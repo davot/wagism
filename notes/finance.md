@@ -19,7 +19,7 @@ It models:
 - the `CentralBank` as the only issuer of new `FiatCurrency` and `BankReserves`;
 - the funding / settlement constraint that rules out the claim that writing a loan-deposit pair creates new purchasing power.
 
-It does **not** model the full credit cycle and crises, quantitative easing as a concrete central-bank operation, merchant’s capital, or the state as a tax-and-spend machine beyond its role in issuing fiat. Fictitious capital (shares, bonds, and other titles as capitalised claims on future surplus value) is modelled in [fictitious-capital.md](fictitious-capital.md).
+It does **not** model the full credit cycle and crises, quantitative easing as a concrete central-bank operation, or merchant’s capital. Fictitious capital (shares, bonds, and other titles as capitalised claims on future surplus value) is modelled in [fictitious-capital.md](fictitious-capital.md). The state as taxer, borrower, and spender is in [state.md](state.md).
 
 ---
 
@@ -30,7 +30,7 @@ It does **not** model the full credit cycle and crises, quantitative easing as a
 > A bank represents on the one hand the centralisation of money-capital, of the lenders, and on the other hand the centralisation of the borrowers. It makes its profit in general by borrowing at lower rates than those at which it lends.
 > — *Capital* III, ch. 25 (Penguin / Lawrence & Wishart paginations differ; SPGB cites p. 528 of the Progress/Lawrence edition)
 
-Interest is therefore not a second source of value beside surplus value, and not a “special profit” that a bank conjures by writing numbers. It is the part of already-produced `s` paid for the use of money-capital. What remains with the functioning (industrial or commercial) capitalist is `IndustrialProfit`. Rent, tax, and merchant’s profit are further shares; they are deferred.
+Interest is therefore not a second source of value beside surplus value, and not a “special profit” that a bank conjures by writing numbers. It is the part of already-produced `s` paid for the use of money-capital. What remains with the functioning (industrial or commercial) capitalist is `IndustrialProfit`. Merchant’s profit is a further share (now in [prices-of-production.md](prices-of-production.md)); tax is in [state.md](state.md); rent remains deferred.
 
 The same point is why a bank that “creates credit” in the thin-air sense would be a miracle: new purchasing power would appear in circulation without new value having been produced. Marx’s whole presentation of surplus value is a refusal of that miracle. Wealth and purchasing power arise in production (SPGB, *The Magic Money Myth*).
 
@@ -133,7 +133,7 @@ The same refusals as surplus-value.md §3, applied to finance:
 - The credit cycle, overtrading, and crises as the point at which claims cannot be validated in production.
 - Quantitative easing and other concrete central-bank operations (asset purchases that swap one existing asset for newly issued reserves).
 - Merchant’s capital as a full circuit beyond the commercial share of the average rate (that share is in [prices-of-production.md](prices-of-production.md)).
-- The state as taxer, borrower, and spender — beyond its role here as the backer of fiat.
+- The state as taxer, borrower, and spender — now [state.md](state.md) (the central bank’s backing remains here).
 - Rent as a further share of redistributed surplus value. How industrial and commercial profit tend toward one average rate is modelled in [prices-of-production.md](prices-of-production.md).
 
 ---

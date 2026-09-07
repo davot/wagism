@@ -29,8 +29,9 @@ PlantUML stereotypes (`historically specific`, `transhistorical`, `abstract det.
 4. Fictitious capital — shares and government bonds as capitalised claims on future surplus value, not a second real capital — notes in [notes/fictitious-capital.md](notes/fictitious-capital.md), source in [fictitious-capital.puml](models/fictitious-capital.puml)
 5. Prices of production — competition levels the rate of profit and redistributes surplus value; it does not create it — notes in [notes/prices-of-production.md](notes/prices-of-production.md), source in [prices-of-production.puml](models/prices-of-production.puml)
 6. Concentration, centralisation, and the reserve army — the general law of capitalist accumulation — notes in [notes/concentration.md](notes/concentration.md), source in [concentration.puml](models/concentration.puml)
+7. The capitalist state — public power of the class, tax as a share of the product, nationalisation as still capital — notes in [notes/state.md](notes/state.md), source in [state.puml](models/state.puml)
 
-Later increments can add reproduction schemas, the falling rate of profit, crises, the state, and world market, always rising from these abstract determinations toward a richer concrete.
+Later increments can add reproduction schemas, the falling rate of profit, crises, ground rent, and world market, always rising from these abstract determinations toward a richer concrete.
 
 ![Surplus value overview](models/rendered/surplus-value-overview.svg)
 

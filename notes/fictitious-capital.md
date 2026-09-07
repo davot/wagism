@@ -21,7 +21,7 @@ It models:
 - `SpeculativeBubble` as the periodic attempt to make money without the mediation of the production process;
 - `PaperDuplicateIllusion` as the rejected claim that the title is a second real capital.
 
-It does **not** model derivatives and further layers of titles built on titles (except to note that they are the same relation iterated), the full credit cycle and crises as a concrete totality, quantitative easing, land as capitalised rent, or “financialisation” as a new mode of production that would dethrone surplus value. Those presuppose this increment.
+It does **not** model derivatives and further layers of titles built on titles (except to note that they are the same relation iterated), the full credit cycle and crises as a concrete totality, quantitative easing, land as capitalised rent, or “financialisation” as a new mode of production that would dethrone surplus value. The public power that levies `Tax` is in [state.md](state.md). Those other items presuppose this increment.
 
 ---
 
@@ -49,7 +49,7 @@ Interest-bearing capital lent to an enterprise that produces commodities is **no
 A `GovernmentBond` is a title to future tax. Two things make it fictitious twice over:
 
 1. Like any other title, its market price is a capitalisation of expected interest, not a sum of real capital in production.
-2. Unlike a share, the money the state raised has typically already been spent — often unproductively (administration, war, interest on earlier debt). There is no factory whose surplus value the bond duplicates. The coupon is paid from `Tax`, and tax is a deduction from social surplus value (or from wages — still not a new source of value).
+2. Unlike a share, the money the state raised has typically already been spent — often unproductively (administration, war, interest on earlier debt). There is no factory whose surplus value the bond duplicates. The coupon is paid from `Tax`, and tax is a deduction from social surplus value (or from wages — still not a new source of value). The public power that levies, and the incidence of the levy, are in [state.md](state.md).
 
 Marx: the money- or capital-value of such paper “does not represent capital at all, as in the case of national debts” (*Capital* III, ch. 29). The national debt is a claim on future production, not a second national wealth.
 
@@ -99,7 +99,7 @@ Title to a portion of future surplus value (dividend) plus the hope of `CapitalG
 
 ### `GovernmentBond` and `Tax`
 
-Title to future tax; tax as a deduction from social surplus value. Doubly fictitious (§3).
+Title to future tax; tax as a deduction from social surplus value. Doubly fictitious (§3). The state that levies, and whether the cut falls on `s` or sticks in `v`, are in [state.md](state.md).
 
 ### `StockExchange`, `CapitalGain`, `SpeculativeBubble`
 
@@ -128,6 +128,7 @@ Rejected claim, like `ThinAirTheory` and `SimpleReproduction`: the determination
 - Quantitative easing as a concrete swap of titles for newly issued reserves.
 - Bank capital as itself largely composed of these titles (*Capital* III, ch. 29) — noted, not drawn.
 - “Financialisation” as a descriptive history of deregulation and floating rates after Bretton Woods (SPGB uses this history; this increment keeps the types, not the chronology).
+- The public power that levies tax, and nationalisation as still capital — now [state.md](state.md).
 
 ---
 

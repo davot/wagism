@@ -141,4 +141,4 @@ Both capitals tend to receive average profit on what they advance. Commerce prod
 
 - “An introduction to Marxian economics 2: the rate of profit” — average rate; profit as redistributed surplus value.
 - “What is surplus value” (*Socialist Standard*, December 1962) — the numerical distinction between rate of exploitation and rate of profit, which this increment generalises across branches.
-- The case that shop, bank, and tax are not second sources of surplus value — already used in [surplus-value.md](surplus-value.md) §7; here applied to the leveling of commercial and industrial rates.
+- The case that shop, bank, and tax are not second sources of surplus value — already used in [surplus-value.md](surplus-value.md) §7; here applied to the leveling of commercial and industrial rates. Tax as a relation of the state is in [state.md](state.md).

@@ -12,7 +12,7 @@ Capitalism, in the sense used here, is a historically specific social system: cl
 
 This increment models only the **theory of (surplus) value**: how material wealth takes the commodity form; how value is a social relation measured by socially necessary labour-time; how labour-power becomes a commodity; and how unpaid labour appears as surplus value, the sole source of profit, interest, and rent.
 
-It does **not** yet model the state or the world market. Those are more concrete determinations. They presuppose this model; they do not replace it.
+It does **not** yet model the world market. That is a more concrete determination. It presupposes this model; it does not replace it. The state is in [state.md](state.md).
 
 A second increment, [accumulation of capital](accumulation.md), builds directly on `Capital` and `SurplusValue` as defined here: it introduces competition among many capitals only so far as needed to show that accumulation is a compulsion, not a choice. Equalisation of profit rates is in [prices-of-production.md](prices-of-production.md). Concentration, centralisation, and the reserve army are in [concentration.md](concentration.md).
 
@@ -23,6 +23,8 @@ A fourth increment, [fictitious capital](fictitious-capital.md), distinguishes r
 A fifth increment, [prices of production](prices-of-production.md), shows that competition levels the rate of profit across industrial and commercial capital and only redistributes the pool of surplus value.
 
 A sixth increment, [concentration, centralisation, and the reserve army](concentration.md), draws the general law: accumulation produces fewer, larger capitals and a surplus working population relative to capital’s demand for labour-power.
+
+A seventh increment, [the capitalist state](state.md), places the public power of the class: tax is a share of the product, not a fourth source of value; nationalisation is still capital.
 
 ---
 
@@ -199,7 +201,7 @@ The concrete social order for this increment: generalised commodity production +
 
 Two classes, defined by relation to the means of production, not by income size, status, or “middle class” occupations (SPGB). Anyone who must sell labour-power to live is working-class, including salaried, professional, and unemployed workers, and those in the reproduction cycle of labour-power.
 
-The worker is not exploited “again” by shopkeepers, lenders, or tax-collectors as a second source of surplus value. Exploitation takes place at the point of production. The surplus value is later *shared* as profit, interest, rent, and tax (SPGB). Cheating in circulation is a different relation.
+The worker is not exploited “again” by shopkeepers, lenders, or tax-collectors as a second source of surplus value. Exploitation takes place at the point of production. The surplus value is later *shared* as profit, interest, rent, and tax (SPGB). Tax as a relation of the state is in [state.md](state.md). Cheating in circulation is a different relation.
 
 The capitalist class as a whole exploits the working class as a whole. Production is social; so is appropriation.
 
@@ -329,7 +331,7 @@ These belong to later, more concrete increments. They are not “corrections” 
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.
 - Reproduction schemas (Departments I/II). Concentration, centralisation, and the reserve army are in [concentration.md](concentration.md).
-- The state, world market, and crises as a concrete totality.
+- The world market, and crises as a concrete totality. The state is in [state.md](state.md).
 - Credit-money as a further determination of money-as-IOU, without abandoning money as the form of value (Chambers). Fiat as inconvertible state money is already in [finance.md](finance.md).
 
 ---

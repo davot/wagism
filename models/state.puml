@@ -1,0 +1,164 @@
+' The capitalist state: class model
+' Companion notes: notes/state.md — full stereotype legend: notes/stereotypes.md
+'
+' The state is the public power of the capitalist class. Tax is a compulsory
+' share of the product (mostly surplus value; sometimes a cut into the wage).
+' Nationalisation changes who personifies capital; it does not abolish
+' wage-labour or accumulation (Marx; SPGB).
+
+@startuml state
+title IX. The state — public power of capital, not a source of value
+caption Tax is a share of the product; nationalisation is still capital: notes/state.md
+
+hide circle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+  BackgroundColor<<personification>> #FFF8E1
+  BackgroundColor<<abstract det.>> #E3F2FD
+}
+
+package "I. The relation the state belongs to" as P1 {
+  class CapitalistModeOfProduction <<historically specific>> {
+    wage-labour and capital
+    (full definition: surplus-value-capital.puml)
+  }
+  class CapitalistClass <<historically specific>> {
+    monopoly of the means of life
+    (full definition: surplus-value-capital.puml)
+  }
+  class CapitalistState <<historically specific>> <<social relation>> {
+    public power of the capitalist class
+    force, law, money, tax
+    not a producer of value
+  }
+  class StateAsNeutralArbiter <<abstract det.>> {
+    {abstract}
+    rejected: the state stands
+    above classes and creates
+    fairness by policy
+  }
+}
+
+package "II. Tax — a compulsory share" as P2 {
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    (full definition: surplus-value-capital.puml)
+  }
+  class Wage <<historically specific>> {
+    price of labour-power
+    possible channel of the levy
+    (full definition: surplus-value-capital.puml)
+  }
+  class Tax <<historically specific>> {
+    compulsory deduction
+    source is the product of labour
+    mostly a cut of s; can stick in v
+  }
+  class TaxCreatesValue <<abstract det.>> {
+    {abstract}
+    rejected: the levy is a
+    fourth source of value
+    beside unpaid labour
+  }
+}
+
+package "III. What the levy funds" as P3 {
+  class ForceAndLaw <<historically specific>> {
+    police, courts, military
+    maintains the class order
+  }
+  class PublicInfrastructure <<historically specific>> {
+    roads, ports, power
+    cheapens conditions of production
+    does not create s
+  }
+  class StateReproductionOfLP <<historically specific>> {
+    schools, health, benefits
+    enters reproduction of labour-power
+  }
+  class CentralBank <<historically specific>> {
+    issues fiat
+    (full definition: finance.puml)
+  }
+}
+
+package "IV. Nationalisation" as P4 {
+  class Capital <<historically specific>> <<social relation>> {
+    value that valorizes itself
+    (full definition: surplus-value-capital.puml)
+  }
+  class StateCapital <<historically specific>> <<social relation>> {
+    capital whose legal owner
+    is the state
+    still M – C … P … C' – M'
+    if it buys LP and sells
+  }
+  class StateBureaucracy <<personification>> {
+    personification of state capital
+    not abolition of the role
+  }
+  class NationalisationAbolishesCapital <<abstract det.>> {
+    {abstract}
+    rejected: public title deeds
+    end wage-labour and accumulation
+  }
+}
+
+CapitalistModeOfProduction *-- CapitalistClass
+CapitalistModeOfProduction *-- CapitalistState
+CapitalistClass --> CapitalistState : its public power
+CapitalistState --> Tax : levies
+Tax --> SurplusValue : mainly deducted from
+Wage --> Tax : may channel
+Tax --> Wage : can stick as a cut in
+CapitalistState --> ForceAndLaw : funds
+CapitalistState --> PublicInfrastructure : funds
+CapitalistState --> StateReproductionOfLP : funds
+CapitalistState --> CentralBank : backs
+PublicInfrastructure --> SurplusValue : conditions of production\n(does not create s)
+StateReproductionOfLP --> Wage : enters reproduction of
+CapitalistState --> StateCapital : may own as
+StateBureaucracy --> StateCapital : personifies
+StateCapital --|> Capital
+StateCapital --> SurplusValue : still appropriates\nif it exploits LP
+StateAsNeutralArbiter ..> CapitalistState : mistakes a class power for
+TaxCreatesValue ..> Tax : mistakes a share for a source
+NationalisationAbolishesCapital ..> StateCapital : mistakes a change of title for
+
+P1 -[hidden]right-> P2
+P2 -[hidden]right-> P3
+P3 -[hidden]right-> P4
+
+note top of TaxCreatesValue
+  **No fourth source of value**
+  Interest, rent, and tax are claims
+  on the product of labour. The state
+  does not produce surplus value.
+  Who writes the cheque is not
+  the source: wages can be the conduit.
+end note
+
+note bottom of Tax
+  If the value of labour-power holds,
+  a wage-tax tends to be shifted onto s.
+  If it sticks, real wages fall:
+  a cut into necessary labour, still
+  not a new creation of value.
+end note
+
+note bottom of StateCapital
+  SPGB: state capitalism.
+  Buying, selling, and employing
+  wage-labour under a public seal
+  is still capital. Accumulation
+  continues if the unit competes.
+end note
+
+@enduml
