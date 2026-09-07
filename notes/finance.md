@@ -19,7 +19,7 @@ It models:
 - the `CentralBank` as the only issuer of new `FiatCurrency` and `BankReserves`;
 - the funding / settlement constraint that rules out the claim that writing a loan-deposit pair creates new purchasing power.
 
-It does **not** model fictitious capital in detail (shares, bonds, and other titles as capitalised claims on future surplus value), the full credit cycle and crises, quantitative easing as a concrete central-bank operation, merchant’s capital, or the state as a tax-and-spend machine beyond its role in issuing fiat. Those presuppose this increment.
+It does **not** model the full credit cycle and crises, quantitative easing as a concrete central-bank operation, merchant’s capital, or the state as a tax-and-spend machine beyond its role in issuing fiat. Fictitious capital (shares, bonds, and other titles as capitalised claims on future surplus value) is modelled in [fictitious-capital.md](fictitious-capital.md).
 
 ---
 
@@ -129,7 +129,7 @@ The same refusals as surplus-value.md §3, applied to finance:
 
 ## 8. What is deferred
 
-- Fictitious capital — shares, bonds, and derivatives as capitalised claims on future surplus value (*Capital* III, Part 5).
+- Derivatives and further layers of titles — the same capitalisation iterated ([fictitious-capital.md](fictitious-capital.md) models the share and the government bond).
 - The credit cycle, overtrading, and crises as the point at which claims cannot be validated in production.
 - Quantitative easing and other concrete central-bank operations (asset purchases that swap one existing asset for newly issued reserves).
 - Merchant’s capital, and the further sharing of surplus value as commercial profit.

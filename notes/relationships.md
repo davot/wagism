@@ -2,7 +2,7 @@
 
 A complete inventory of every relationship drawn in the diagrams, organised by diagram, plus the notation used to draw them. Companion to [stereotypes.md](stereotypes.md) (which documents the *classes*); this file documents the *lines between them*.
 
-This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), and [finance.md](finance.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
+This is a reference, not a replacement for the notes. Read [surplus-value.md](surplus-value.md), [accumulation.md](accumulation.md), [finance.md](finance.md), and [fictitious-capital.md](fictitious-capital.md) for why each relationship holds; use this file to look one up quickly, or to check the model for consistency.
 
 ---
 
@@ -189,6 +189,39 @@ The load-bearing claims of this increment sit on two clusters of arrows (see [fi
 
 ---
 
+## VII. Fictitious capital ([fictitious-capital.puml](../models/fictitious-capital.puml))
+
+| A | | B | Label |
+| --- | --- | --- | --- |
+| `JointStockCompany` | `-->` | `RealCapital` | invests proceeds as |
+| `RealCapital` | `*--` | `SurplusValue` | appropriates |
+| `JointStockCompany` | `-->` | `Share` | issues once |
+| `Share` | `--\|>` | `FictitiousCapital` | *(is a kind of)* |
+| `GovernmentBond` | `--\|>` | `FictitiousCapital` | *(is a kind of)* |
+| `FictitiousCapital` | `-->` | `Capitalisation` | formed by |
+| `Capitalisation` | `-->` | `RateOfInterest` | divides income by |
+| `Share` | `-->` | `SurplusValue` | claims a portion of future |
+| `GovernmentBond` | `-->` | `Tax` | claims future |
+| `Tax` | `-->` | `SurplusValue` | deducted from |
+| `StockExchange` | `-->` | `Share` | circulates |
+| `StockExchange` | `-->` | `GovernmentBond` | circulates |
+| `StockExchange` | `-->` | `CapitalGain` | redistributes as |
+| `CapitalGain` | `..>` | `SurplusValue` | does not produce |
+| `SpeculativeBubble` | `-->` | `FictitiousCapital` | inflates the price of |
+| `SpeculativeBubble` | `..>` | `RealCapital` | detaches from (temporarily) |
+| `PaperDuplicateIllusion` | `..>` | `Share` | mistakes title for |
+| `PaperDuplicateIllusion` | `..>` | `GovernmentBond` | mistakes title for |
+| `FictitiousCapital` | `..>` | `PaperDuplicateIllusion` | is not |
+| `RealCapital` | `..>` | `PaperDuplicateIllusion` | money does not exist twice |
+
+The load-bearing claims (see [fictitious-capital.md](fictitious-capital.md)):
+
+- There is **no** `FictitiousCapital --\|> RealCapital`. Inheritance would say the title is a kind of valorizing capital. `Share --\|> FictitiousCapital` says only that a share is a kind of capitalised claim.
+- `Share --> SurplusValue : claims a portion of future` and `Tax --> SurplusValue : deducted from` are the only arrows that reach the source. `CapitalGain ..> SurplusValue : does not produce` is the denial that the secondary market creates value.
+- `PaperDuplicateIllusion` is a contrast class, like `ThinAirTheory`: the rejected claim that the title is a second real capital.
+
+---
+
 ## Cross-diagram note: classes that recur
 
-`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced only in finance.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.
+`Capital`, `SurplusValue`, `Capitalist`, `ConstantCapital`, `VariableCapital`, `LabourProcess`, `LivingLabour`, `MeansOfProduction`, `MeansOfSubsistence`, `Commodity`, `Value`, and `LabourPower` each appear in more than one file (`Interest` and the banking types are introduced in finance.puml; `FictitiousCapital` and the title types only in fictitious-capital.puml) (full definition given once, in the most concrete diagram where they're introduced; recapped with a short body elsewhere — see each `.puml` file's header comment for which file holds the full definition). Their relationships *within* each diagram are independent per-file — this document does not merge them into one graph — because each diagram is deliberately a different, self-contained level of concretion (see [surplus-value.md §2](surplus-value.md#2-abstract-and-concrete--why-this-is-an-object-model)), not a fragment of one master diagram.

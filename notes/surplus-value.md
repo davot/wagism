@@ -18,6 +18,8 @@ A second increment, [accumulation of capital](accumulation.md), builds directly 
 
 A third increment, [credit and banking](finance.md), places finance in the same system: interest is a share of surplus value; commercial banks intermediate already-existing funds; only the central bank issues new fiat.
 
+A fourth increment, [fictitious capital](fictitious-capital.md), distinguishes real capital from capitalised titles (shares, government bonds): the paper is a claim on future surplus value, not a second factory.
+
 ---
 
 ## 2. Abstract and concrete — why this is an object model
@@ -318,7 +320,7 @@ A model that silently dropped `Nature`, `UseValue`, or `LabourProcess` would hav
 These belong to later, more concrete increments. They are not “corrections” of this model.
 
 - Prices of production and the average rate of profit (*Capital* III).
-- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital. (The compulsion to accumulate that competition exerts on the individual capitalist is modelled in [accumulation.md](accumulation.md). Interest-bearing capital and the commercial bank as intermediary are modelled in [finance.md](finance.md); fictitious capital and crises are not.)
+- The fuller theory of competition among many capitals: equalisation of profit rates, merchant’s capital. (The compulsion to accumulate is in [accumulation.md](accumulation.md); interest-bearing capital is in [finance.md](finance.md); fictitious capital is in [fictitious-capital.md](fictitious-capital.md); crises are not.)
 - Turnover, and financial institutions as shorteners of turnover beyond the intermediation already in [finance.md](finance.md).
 - Formal and real subsumption; manufacture and modern industry in detail.
 - Primitive accumulation as the historical production of the class relation.

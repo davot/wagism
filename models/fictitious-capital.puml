@@ -1,0 +1,150 @@
+' Fictitious capital: class model
+' Companion notes: notes/fictitious-capital.md — full stereotype legend: notes/stereotypes.md
+'
+' Paper titles (shares, government bonds) are capitalised claims on future
+' surplus value or future tax. They are not a second existence of the real
+' capital invested in production (Marx, Capital III, ch. 29–30; SPGB).
+
+@startuml fictitious-capital
+title VI. Fictitious capital — paper claims on future surplus value
+caption Titles are not a second real capital: notes/fictitious-capital.md
+
+hide circle
+skinparam shadowing false
+skinparam backgroundColor white
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam ranksep 50
+skinparam nodesep 35
+skinparam class {
+  BackgroundColor<<abstract det.>> #E3F2FD
+  BackgroundColor<<social relation>> #EDE7F6
+  BackgroundColor<<historically specific>> #FFEBEE
+}
+
+package "I. Real capital still produces surplus value" as P1 {
+  class SurplusValue <<historically specific>> <<social relation>> {
+    unpaid labour
+    (full definition: surplus-value-capital.puml)
+  }
+  class RealCapital <<historically specific>> <<social relation>> {
+    money invested in MP + LP
+    circuit : M – C … P … C' – M'
+    the only capital that produces s
+  }
+  class JointStockCompany <<historically specific>> {
+    raises funds once by issuing titles
+    invests proceeds as real capital
+  }
+}
+
+package "II. Capitalisation (how a title gets a price)" as P2 {
+  abstract class FictitiousCapital <<abstract det.>> <<social relation>> <<historically specific>> {
+    {abstract}
+    capitalised claim on future revenue
+    price = expected income / rate of interest
+    not a second real capital
+  }
+  class Capitalisation <<historically specific>> {
+    treats a regular income
+    as if it were interest on a principal
+  }
+  class RateOfInterest <<historically specific>> <<social relation>> {
+    going rate at which income
+    is capitalised
+    (full definition: finance.puml Interest)
+  }
+}
+
+package "III. Titles" as P3 {
+  class Share <<historically specific>> {
+    title to a portion of
+    future surplus value
+    dividend + hoped-for capital gain
+  }
+  class GovernmentBond <<historically specific>> {
+    title to future tax
+    doubly fictitious:
+    the money has already been spent
+  }
+  class Tax <<historically specific>> {
+    deduction from social surplus value
+    (or from wages — still not new value)
+  }
+}
+
+package "IV. Secondary market" as P4 {
+  class StockExchange <<historically specific>> {
+    market in titles, not in factories
+    circulation of property rights
+  }
+  class CapitalGain <<historically specific>> {
+    price difference on resale of a title
+    a transfer, not new value
+  }
+  class SpeculativeBubble <<historically specific>> {
+    title prices detach from
+    the movement of real capital
+    bursts when claims cannot be validated
+  }
+}
+
+class PaperDuplicateIllusion <<abstract det.>> {
+  {abstract}
+  rejected claim: the title is a second
+  real capital beside the enterprise
+}
+
+JointStockCompany --> RealCapital : invests proceeds as
+RealCapital *-- SurplusValue : appropriates
+JointStockCompany --> Share : issues once
+Share --|> FictitiousCapital
+GovernmentBond --|> FictitiousCapital
+FictitiousCapital --> Capitalisation : formed by
+Capitalisation --> RateOfInterest : divides income by
+Share --> SurplusValue : claims a portion of future
+GovernmentBond --> Tax : claims future
+Tax --> SurplusValue : deducted from
+StockExchange --> Share : circulates
+StockExchange --> GovernmentBond : circulates
+StockExchange --> CapitalGain : redistributes as
+CapitalGain ..> SurplusValue : does not produce
+SpeculativeBubble --> FictitiousCapital : inflates the price of
+SpeculativeBubble ..> RealCapital : detaches from\n(temporarily)
+PaperDuplicateIllusion ..> Share : mistakes title for
+PaperDuplicateIllusion ..> GovernmentBond : mistakes title for
+FictitiousCapital ..> PaperDuplicateIllusion : is not
+RealCapital ..> PaperDuplicateIllusion : money does not\nexist twice
+
+P1 -[hidden]right-> P2
+P2 -[hidden]right-> P3
+P1 -[hidden]down-> P4
+P3 -[hidden]down-> P4
+
+note as NOnce
+  **Money does not exist twice (Capital III, ch. 29)**
+  The sum advanced to an enterprise exists
+  as real capital in production. The share
+  is only a title to a corresponding portion
+  of the surplus value to be realised.
+  A rise or fall in the paper's price,
+  independent of that real capital, leaves
+  the wealth of the nation unchanged.
+end note
+
+note bottom of GovernmentBond
+  Doubly fictitious: the state has spent
+  the borrowed money (often unproductively);
+  the bond is a capitalised claim on future
+  tax, itself a share of surplus value.
+end note
+
+note right of SpeculativeBubble
+  The credit system that finances industry
+  also finances the market in titles.
+  Periodically: "money-making without
+  the mediation of the production process"
+  (Capital II, ch. 1). The bubble bursts.
+end note
+
+@enduml
